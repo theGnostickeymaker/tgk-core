@@ -18,3 +18,7 @@ _site/
 .env
 .env.*
 
+
+.env
+.env.*
+
