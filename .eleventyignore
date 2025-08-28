@@ -3,3 +3,7 @@ _site/
 .netlify/
 .env
 .env.*
+
+.env
+.env.*
+

@@ -1,11 +1,7 @@
-﻿node_modules/
+﻿.env
+.env.*
+node_modules/
 .netlify/
-
-.env
-
-
-.env
-
 
 .env
 .env.*
