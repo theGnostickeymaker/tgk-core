@@ -12,35 +12,44 @@
 <p>These Terms govern access to The Gnostic Key (TGK) and our subscription tiers. TGK provides digital content (scrolls, series, archives). Subscriptions auto-renew monthly until cancelled. TGK content is educational/spiritual and not legal, medical, or financial advice.</p>
 
   </main>
-  ﻿<footer class="mt-16 border-t border-neutral-800/40 py-10 text-sm text-neutral-300">
-  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div>
-      <div class="font-semibold text-neutral-100">The Gnostic Key</div>
-      <p class="mt-2 leading-relaxed text-neutral-400">© 2025 The Gnostic Key. All rights reserved.</p>
+  ﻿<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Home</a><span class="footer-divider">✧</span>
+      <a href="/legal/privacy/">Privacy Policy</a><span class="footer-divider">✧</span>
+      <a href="/legal/terms/">Terms & Conditions</a><span class="footer-divider">✧</span>
+      <a href="/about/">About</a><span class="footer-divider">✧</span>
+      <a href="/subscribe/">Subscribe</a>
     </div>
-    <nav>
-      <div class="font-semibold text-neutral-100">Legal</div>
-      <ul class="mt-2 space-y-2">
-        <li><a class="hover:underline" href="/legal/terms/">Terms of Service</a></li>
-        <li><a class="hover:underline" href="/legal/privacy/">Privacy Policy</a></li>
-        <li><a class="hover:underline" href="/legal/refunds/">Refunds & Cancellations</a></li>
-        <li><a class="hover:underline" href="/legal/cookies/">Cookie Notice</a></li>
-      </ul>
-    </nav>
-    <div>
-      <div class="font-semibold text-neutral-100">Subscriptions</div>
-      <ul class="mt-2 space-y-2">
-        <li>Free tier: first 3 scrolls of each series</li>
-        <li>£5 tier: full first series access</li>
-        <li>£12 tier: all subsequent series</li>
-      </ul>
-      <p class="mt-3 text-neutral-400">
-        Auto-renews monthly. Cancel anytime in <a class="underline underline-offset-2" href="/account">Account</a> or the
-        <a class="underline underline-offset-2" href="/billing">Billing Portal</a>.
-      </p>
+
+    <p class="footer-note">© <span id="year"></span> The Gnostic Key. All Rights Reserved.</p>
+    <br>
+    <p class="footer-note">
+      Published by <em>The Gnostic Key Limited</em><br>
+      Registered in England & Wales No. 16342669
+    </p>
+
+    <div class="footer-glyphs">
+      <span class="footer-glyph glow-soft">☉</span>
+      <span class="footer-glyph glow-soft">🜂</span>
+      <span class="footer-glyph glow-soft">☿</span>
+      <span class="footer-glyph glow-soft">✷</span>
     </div>
   </div>
 </footer>
+
+<div class="floating-toggles">
+  <button type="button" id="theme-toggle" class="theme-toggle-floating" aria-label="Toggle Theme">
+    <span class="icon">☀️</span>
+  </button>
+  <button type="button" id="scrollTopBtn" class="theme-toggle-floating" title="Return to Top">
+    ⬆️
+  </button>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>

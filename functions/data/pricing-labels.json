@@ -1,0 +1,10 @@
+{
+  "INITIATE": "£5/mo",
+  "INITIATE_YEAR": "£50/yr (2 months free)",
+  "ADEPT": "£12/mo",
+  "ADEPT_YEAR": "£120/yr (2 months free)",
+  "ADEPT_YEAR_PROMO": "£100/yr (Launch - 90 days)",
+  "LIFETIME_FOUNDER": "£250 once (200 seats)",
+  "LIFETIME": "£300 once",
+  "BILLING_PORTAL_RETURN": "/dashboard/"
+}
