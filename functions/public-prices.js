@@ -12,7 +12,11 @@
     if (!res.ok) return { statusCode: 400, body: JSON.stringify(data) };
 
     const filtered = ids.length ? data.data.filter(p => ids.includes(p.id)) : data.data;
-    return { statusCode: 200, headers: { "Content-Type": "application/json" }, body: JSON.stringify(filtered) };
+    return {
+      statusCode: 200,
+      headers: { "Content-Type": "application/json", "Cache-Control": "no-store" },
+      body: JSON.stringify(filtered)
+    };
   } catch (e) {
     return { statusCode: 500, body: e.message };
   }

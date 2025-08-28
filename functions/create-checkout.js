@@ -1,12 +1,17 @@
-﻿const qs = (o) => new URLSearchParams(o).toString();
+﻿// CJS style; Node 18+ has global fetch
+const qs = (o) => new URLSearchParams(o).toString();
 
 exports.handler = async (event) => {
   try {
     const key = process.env.STRIPE_SECRET_KEY;
     if (!key) return { statusCode: 500, body: "Missing STRIPE_SECRET_KEY" };
 
-    const proto = event.headers["x-forwarded-proto"] || "https";
-    const host  = event.headers.host;
+    // validate allowed prices (CSV in env)
+    const idsCsv = process.env.ALLOWED_PRICE_IDS || "";
+    const allowed = idsCsv.split(",").map(s => s.trim()).filter(Boolean);
+
+    const proto  = event.headers["x-forwarded-proto"] || "https";
+    const host   = event.headers.host;
     const origin = `${proto}://${host}`;
 
     const params = event.httpMethod === "POST"
@@ -14,11 +19,14 @@ exports.handler = async (event) => {
       : Object.fromEntries(new URLSearchParams(event.rawQuery || event.queryStringParameters || {}));
 
     const price = params.price || params.priceId;
-    const mode  = params.mode || "subscription"; // "subscription" or "payment"
+    const mode  = params.mode === "payment" ? "payment" : "subscription"; // default to subscription
     const qty   = Number(params.quantity || 1);
     const promo = params.promo || params.promotion_code;
 
     if (!price) return { statusCode: 400, body: "Missing ?price=price_xxx" };
+    if (allowed.length && !allowed.includes(price)) {
+      return { statusCode: 400, body: "Price not allowed" };
+    }
 
     const body = new URLSearchParams();
     body.append("mode", mode);
