@@ -1,0 +1,14 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if title %}{{ title }} — {% endif %}The Gnostic Key</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="bg-black text-neutral-100">
+  <main class="container mx-auto px-4 py-10">
+    {{ content | safe }}
+  </main>
+  {% include "footer.njk" %}
+</body>
+</html>

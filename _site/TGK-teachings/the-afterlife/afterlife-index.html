@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- TGK Head Bootstrap: race CSS ahead to avoid FOUC -->
+  <script src="/scripts/head-bootstrap.js"></script>
+  <script src="/scripts/theme-pref.js"></script>
+
+  <!-- 2) Dynamic head marker + per-page SEO overrides -->
+  <meta data-include-head />
+  <script id="pageMeta" type="application/json">
+  {
+    "title": "The Afterlife Series ✦ Gnostic Teachings & Mystical Paths | The Gnostic Key",
+    "description": "Journey beyond the veil. The Afterlife Series explores the soul’s passage through Gnostic, ancient, and mystical teachings from around the world.",
+    "ogImage": "https://thegnostickey.com/TGK-assets/images/share/the-teachings/afterlife-series.jpg",
+    "canonicalUrl": "https://thegnostickey.com/TGK-teachings/the-afterlife/afterlife-index.html",
+    "access": "free",
+    "publishedTime": "2025-05-20"
+  }
+  </script>
+
+  <!-- Page Header & breadcrumb markup -->
+  <script type="application/json" id="pageBreadcrumbs">
+  [
+    { "label": "The Gnostic Key", "href": "/index.html" },
+    { "label": "The Teachings", "href": "/tgk-teachings/teachings-index.html" }
+  ]
+  </script>
+
+  <style id="tgk-critical">
+    html,body{margin:0;padding:0}
+    /* dark safety only; the actual overlay comes from vars immediately */
+    body{
+      background-color:#0b0b10;
+      background-image: var(--overlay-bg-gradient, none), var(--overlay-image, none);
+      background-position:center; background-repeat:no-repeat; background-size:cover;
+      opacity:0; transition:opacity .18s ease;
+    }
+    .site-header{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:2rem 1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.08)}
+    .site-header .header-link{color:inherit;text-decoration:none;font-weight:700}
+    .glyph-scroll{display:inline-block}
+    #mobileNav{position:fixed;inset:0 auto 0 0;width:80vw;max-width:340px;transform:translateX(-100%);transition:transform .25s ease;background:rgba(20,20,24,.98);z-index:9999}
+    #mobileNav.open{transform:translateX(0)}
+    #navOverlay{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:9998}
+    #navOverlay.active{opacity:1;pointer-events:auto}
+    .hamburger-icon{position:fixed;left:1rem;top:1rem;background:transparent;border:0;font-size:1.6rem;color:inherit;z-index:10000}
+    .floating-toggles{position:fixed;right:1rem;bottom:1rem;display:flex;gap:.5rem;z-index:10000}
+    .theme-toggle-floating{border:1px solid rgba(255,255,255,.2);background:transparent;border-radius:999px;padding:.6rem .75rem}
+  </style>
+</head>
+
+<body class="template-base gold"
+      data-header-title="The Afterlife Series"
+      data-header-subtitle="Explore the Mystical Afterlife Scrolls"
+      data-header-glyphs="⏳, ☉, ⏳">
+
+  <div id="bg-overlay" class="background-overlay"></div>
+
+  <!-- 🜁 Overlay -->
+  <div id="navOverlay"></div>
+
+  <!-- 🗝️ Slide-Out Navigation Menu -->
+  <div data-include="nav"></div>
+
+  <!-- 🔱 Header (dynamic include) -->
+  <div data-include="header"></div>
+
+  <main class="main-content">
+
+    <section class="page-title-block">
+      <p class="page-title">
+        Explore the mystery of death, rebirth, and liberation. <br>
+        Each scroll reveals the journey of the soul.
+      </p>
+
+      <!-- 🔽 Series Intro: The Afterlife Series -->
+      <details class="disclaimer-box">
+        <summary>
+          <span class="disclaimer-heading">🪬 About the Afterlife Series</span>
+        </summary>
+        <p>Every culture has tried to answer the same question: <em>What happens when we die?</em></p>
+        <p>
+          This series crosses borders and belief systems — Gnostic, Sufi, Buddhist, Kabbalistic, Egyptian, Mesoamerican —
+          not to prove one “truth,” but to reveal the <strong>shared sacred patterns</strong> beneath them all.
+        </p>
+        <p>
+          <strong>We have more in common than we were told.</strong> These scrolls are mirrors. Soul maps.  
+          May they help you remember what was never separate.
+        </p>
+        <p><em><strong>Start with three free scrolls, then unlock the full series for £6/month!</strong></em></p>
+      </details>
+    </section>
+
+    <section class="content-container">
+
+    <section class="portal-grid">
+
+      <!-- Live Scrolls (Free) -->
+      <a href="gnostic-christianity.html" class="gnostic-card free">
+        <div class="free-overlay">Free</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">⛪︎</div>
+          <h2 class="gnostic-card-title">Gnostic Christianity</h2>
+          <div class="gnostic-card-tagline">From resurrection to revelation: the soul’s return decoded.</div>
+        </div>
+      </a>
+
+      <a href="sufi-islam.html" class="gnostic-card free">
+        <div class="free-overlay">Free</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">☪</div>
+          <h2 class="gnostic-card-title">Sufi Islam</h2>
+          <div class="gnostic-card-tagline">The path of love, breath, and the circle of return.</div>
+        </div>
+      </a>
+
+      <a href="kabbalah.html" class="gnostic-card free">
+        <div class="free-overlay">Free</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">✡</div>
+          <h2 class="gnostic-card-title">Kabbalah</h2>
+          <div class="gnostic-card-tagline">Soul descent, divine sparks, and the ladder back home.</div>
+        </div>
+      </a>
+
+      <!-- Premium Scrolls -->
+      <a href="buddhism.html" class="gnostic-card premium">
+        <div class="premium-overlay">Premium</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">☸</div>
+          <h2 class="gnostic-card-title">Buddhism</h2>
+          <div class="gnostic-card-tagline">Emptiness, rebirth, and the wheel of samsara.</div>
+        </div>
+      </a>
+
+      <a href="egyptians.html" class="gnostic-card premium">
+        <div class="premium-overlay">Premium</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">⚖️</div>
+          <h2 class="gnostic-card-title">Ancient Egypt</h2>
+          <div class="gnostic-card-tagline">The weighing of the heart and the voyage through Duat.</div>
+        </div>
+      </a>
+
+      <a href="mesoamerica.html" class="gnostic-card premium">
+        <div class="premium-overlay">Premium</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🌽</div>
+          <h2 class="gnostic-card-title">Mesoamerica</h2>
+          <div class="gnostic-card-tagline">Blood, maize, and the cosmic struggle for rebirth.</div>
+        </div>
+      </a>
+
+      <!-- Coming Soon -->
+      <a href="hindu-afterlife.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🔱</div>
+          <h2 class="gnostic-card-title">Hindu Afterlife</h2>
+          <div class="gnostic-card-tagline">Karma, reincarnation, and the liberation from Maya.</div>
+        </div>
+      </a>
+
+      <a href="zoroastrianism.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🔥</div>
+          <h2 class="gnostic-card-title">Zoroastrianism</h2>
+          <div class="gnostic-card-tagline">The Chinvat Bridge, holy fire, and the war of souls.</div>
+        </div>
+      </a>
+
+      <a href="tibetan-book-of-the-dead.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🌈</div>
+          <h2 class="gnostic-card-title">Tibetan Book of the Dead</h2>
+          <div class="gnostic-card-tagline">The Bardo realms and the light beyond illusion.</div>
+        </div>
+      </a>
+
+      <a href="norse-soul-map.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🪓</div>
+          <h2 class="gnostic-card-title">The Norse Soul Map</h2>
+          <div class="gnostic-card-tagline">Valhalla, Helheim, and the myth of honourable death.</div>
+        </div>
+      </a>
+
+      <a href="christian-mystics.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">✨</div>
+          <h2 class="gnostic-card-title">Christian Mystics & Saints</h2>
+          <div class="gnostic-card-tagline">Visions of light, sacred wounds, and the mystic path beyond death.</div>
+        </div>
+      </a>
+
+      <a href="dmt-realms.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">💀</div>
+          <h2 class="gnostic-card-title">DMT Realms & Astral Disclosures</h2>
+          <div class="gnostic-card-tagline">Entities, fractals, and the soul’s synthetic frontier.</div>
+        </div>
+      </a>
+    </section>
+    </section>
+
+    <div class="gnostic-divider">
+      <span class="divider-symbol pillar-glyph spin glow" aria-hidden="true">✦</span>
+    </div>
+
+  </main>
+
+  <!-- 🌒 Footer (dynamic include) -->
+  <div data-include="footer"></div>
+
+  <!-- 🔧 Load the partials injector LAST -->
+  <script defer src="/scripts/partials.js"></script>
+</body>
+</html>

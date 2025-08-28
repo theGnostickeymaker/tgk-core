@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <!-- 🔮 Meta -->
+  <meta charset="UTF-8" />
+  <meta name="tgk-access" content="free"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Prayer of the Messenger Paul | The Gnostic Vault | Nag Hammadi Library</title>
+
+  <!-- 🔍 Description -->
+  <meta name="description" content="Read the Prayer of the Messenger Paul — a brief, blazing invocation from the Nag Hammadi Library, calling for mercy, healing, and incorruptible fullness. Preserved in The Gnostic Vault." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- 🌐 Open Graph -->
+  <meta property="og:title" content="Prayer of the Messenger Paul | The Gnostic Vault" />
+  <meta property="og:description" content="A luminous Gnostic prayer ascribed to Paul: mercy, gnosis, and the firstborn of grace. Enter The Gnostic Vault and receive its light." />
+  <meta property="og:image" content="https://thegnostickey.com/TGK-assets/images/social/tgk-vault-preview.jpg" />
+  <meta property="og:url" content="https://thegnostickey.com/TGK-vault/codex-reborn/nag-hammadi/prayer-of-the-messenger-paul.html" />
+
+  <!-- 🐦 Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prayer of the Messenger Paul | The Gnostic Vault" />
+  <meta name="twitter:description" content="A brief and powerful Gnostic invocation attributed to Paul. Mercy, healing, and incorruptible fullness." />
+  <meta name="twitter:image" content="https://thegnostickey.com/TGK-assets/images/social/tgk-vault-preview.jpg" />
+
+  <!-- 🌟 Fonts & Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Libre+Baskerville&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+ 
+  <!-- Theme & Navigation -->
+  <script type="module" src="/scripts/navigation/mobile-nav.js"></script>
+  <script type="module" src="/scripts/navigation/theme.js"></script>
+  <script type="module" src="/scripts/dashboards/dashboard.js"></script>
+  <script type="module" src="/scripts/dashboards/bookmark-toggle.js"></script>
+
+  <!-- Firebase Config -->
+  <script type="module" src="/scripts/auth/firebase-config.js"></script>
+  <script type="module" src="/scripts/root/gnostic-key.js" defer></script>
+
+  <!-- Auth Guard -->
+  <script type="module">
+    import { initializeAuth } from '/scripts/auth/auth.js';
+    const accessLevel = document.querySelector('meta[name="tgk-access"]')?.content || 'free';
+    initializeAuth({
+      premiumGuard: accessLevel === 'premium',
+      vaultGate: accessLevel === 'vault',
+      adminGate: accessLevel === 'admin'
+    });
+  </script>
+
+  <!-- 🎨 Core Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/gnostic-core.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/navigation/theme-toggle.css" />
+
+  <!-- 🎨 Component Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/button-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/card-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/form-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/glyph-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/quiz.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/teachings-scroll.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/vault-styles.css" />
+
+  <!-- 🎨 Font Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/fonts/typography-scale.css" />
+
+  <!-- 🎨 Structure Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/dashboard-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/footer-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/header-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/layout-grid.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/page-structure.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/visibility-gates.css" />
+
+  <!-- 🎨 Navigation Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/navigation/nav-bar.css" />
+
+  <!-- 🎨 Theme Tokens -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/themes/light.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/themes/dark.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/themes/accents.css" />
+</head>
+
+<body class="template-base vault">
+
+<div id="bg-overlay" class="background-overlay"></div>
+<div id="top" aria-hidden="true"></div>
+
+<!-- 🌒 Hamburger Toggle -->
+<button type="button" id="mobileToggle" class="hamburger-icon" aria-label="Open Navigation">☰</button>
+
+<!-- 🜁 Overlay -->
+<div id="navOverlay"></div>
+
+<!-- 🗝️ Slide-Out Navigation Menu -->
+<nav id="mobileNav" class="mobile-menu">
+  <div class="drawer-content">
+    <p class="drawer-label nolink">Navigation</p>
+    <ul class="nav-menu">
+      <li><a href="/index.html">Home</a></li>
+      <li id="dashboardLink" class="hidden"><a href="/dashboard.html">Dashboard</a></li>
+      <li><a href="/TGK-teachings/teachings-index.html">The Teachings</a></li>
+      <li><a href="/TGK-obsidian-key/obsidian-index.html">Obsidian Key</a></li>
+            <li><a href="/TGK-gnostic-eye/gnostic-eye-index.html">Gnostic Eye</a></li>      
+      <li><a href="/TGK-Audio/resonant-key-index.html">Resonant Key</a></li>
+      <li><a href="/TGK-vault/hidden-vault.html">The Vault</a></li>
+      <li><a href="/children/">Children's Corner</a></li>
+      <li><a href="/keymakers-dream/">Keymaker's Dream</a></li>
+      <li><a href="/shop/">Shop</a></li>
+      <li><a href="/community/">Community</a></li>
+      <li><a id="authLink" href="/login.html">Login</a></li>
+      <li><a id="subscribe-btn-nav" href="/subscribe.html">Subscribe</a></li>
+    </ul>
+
+    <p class="drawer-label nolink">Connect</p>
+    <div class="mobile-nav-social">
+      <a href="https://facebook.com/thegnostickey" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://instagram.com/thegnostickey" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://tiktok.com/@thegnostickey" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://youtube.com/@thegnostickey" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://twitter.com/thegnostickey" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="https://t.me/thegnostickey" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="https://thegnostickey.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔱 Header -->
+<header class="site-header minimal">
+  <div class="site-brand">
+    <a href="/index.html" class="header-link">The Gnostic Key</a>
+    <span> | </span>
+    <a href="/TGK-vault/hidden-vault.html" class="header-link">The Gnostic Vault</a>
+    <span> | </span>
+    <a href="/TGK-vault/codex-reborn/codex-reborn-index.html" class="header-link">Codex Reborn</a>
+    <span> | </span>
+    <a href="/TGK-vault/codex-reborn/nag-hammadi/nag-hammadi-index.html" class="header-link">Nag Hammadi Library</a>
+  </div>
+
+  <div class="glyph-scroll" aria-hidden="true">✧</div>
+
+  <h3 class="main-logo-scroll">
+    <a href="/TGK-vault/codex-reborn/nag-hammadi/prayer-of-the-messenger-paul.html" class="header-link">
+      Prayer of the Messenger Paul
+    </a>
+  </h3>
+
+  <h1 class="main-tagline-scroll">
+    A Gnostic Invocation of Mercy, Fullness, and Incorruptible Rest
+  </h1>
+</header>
+
+<!-- 🔮 Main Content -->
+<main class="main-content">
+  <section class="content-container">
+
+    <!-- Title -->
+    <h2 class="scroll-title">
+      Prayer of the Messenger Paul
+      <span class="scroll-subtitle">
+        From the Nag Hammadi Library — Codex I (Jung Codex)
+      </span>
+    </h2>
+
+    <section class="section-block">
+      <blockquote class="blockquote">
+        <p>“Grant me your mercy. My redeemer, redeem me, for I am yours.”</p>
+      </blockquote>
+    </section>
+
+    <!-- 📜 Poetic Text -->
+    <section id="prayer-text" class="section-block poetic-prayer">
+      
+      <div class="poem" role="doc-poem" aria-label="Prayer of the Messenger Paul">
+
+        <h2 class="section-heading">THE PRAYER</h2>
+
+        <div class="stanza">
+          <p>Grant me your mercy.<br>
+            My redeemer, redeem me,<br>
+            for I am yours.</p>
+        </div>
+
+        <div class="stanza">
+          <p>I came from you.<br>
+          You are my mind:<br>
+          give me birth.</p>
+        </div>
+
+        <div class="stanza">
+          <p>You are my treasure:<br>
+          open for me.</p>
+        </div>
+
+        <div class="stanza">
+          <p>You are my fullness:<br>
+          accept me.</p>
+        </div>
+
+        <div class="stanza">
+          <p>You are my rest:<br>
+          give me unlimited perfection.</p>
+        </div>
+
+        <div class="stanza">
+          <p>I pray to you,<br>
+          you who exist and preexisted,<br>
+          in the name exalted above every name,<br>
+          through Jesus the anointed,<br>
+          lord of lords,<br>
+          king of the eternal realms.<br>
+          Give me your gifts, with no regret,<br>
+          through the human child,<br>
+          the spirit,<br>
+          the advocate of truth.</p>
+        </div>
+
+        <div class="stanza">
+          <p>Give me authority, I beg of you,<br>
+          give healing for my body, as I beg you,<br>
+          through the preacher of the gospel,<br>
+          and redeem my enlightened soul forever, and my spirit,<br>
+          and disclose to my mind the firstborn of the fullness of grace.</p>
+        </div>
+
+        <div class="stanza">
+          <p>Grant what eyes of angels have not seen,<br>
+          what ears of rulers have not heard,<br>
+          and what has not arisen in the hearts of people,<br>
+          who became angelic,<br>
+          and after the image of the animate god<br>
+          when it was formed in the beginning.<br>
+          I have the faith of hope.</p>
+        </div>
+
+        <div class="stanza">
+          <p>And bestow upon me<br>
+          your beloved, chosen, blessed majesty,<br>
+          you who are the firstborn, the first-conceived,<br>
+          and the wonderful mystery of your house.</p>
+        </div>
+
+        <div class="stanza">
+          <p>For yours is the power and the glory and the praise and the greatness,<br>
+          forever and ever.</p>
+        </div>
+
+        <div class="stanza">
+          <p>Amen.<br>
+          <em>Prayer of Paul (the) Apostle [or, Messenger].</em><br>
+          <em>In Peace.</em><br>
+          <em>Christ is holy.</em></p>
+        </div>
+    </div>
+    </section>
+
+    <!-- Translator’s Note -->
+    <section id="translator-note" class="section-block">
+      <h2 class="section-heading">Translator’s Note</h2>
+      <p>
+        This prayer appears in the <strong>Nag Hammadi Library</strong>, Codex I (Jung Codex). It is presented here in the
+        <em>Codex Reborn</em> format for clarity and mobile readability. Lineation has been preserved to reflect the
+        text’s liturgical character. Translator attribution follows the Gnostic Society Library/Nag Hammadi tradition.
+      </p>
+    </section>
+
+    <section class="section-block fan-the-flame">
+<h2 class="section-heading">🜂 Keep the Flame Alive</h2>
+
+<div class="btn-wrap">
+  <a 
+    id="subscribe-btn"
+    href="/subscribe.html" 
+    class="btn btn-outline hidden"
+    aria-label="Subscribe to unlock more teachings"
+  >
+    ✨ Loved this scroll? Unlock more mystical journeys for £6/month!
+  </a>
+</div>
+
+  <!-- Donation Button -->
+    <div class="btn-wrap">
+      <a href="https://www.buymeacoffee.com/Thegnostickey" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn btn-accent btn-sm">
+         🔥 Fuel the Flame
+      </a>
+    </div>
+</section>
+
+  <!-- ⚠️ Authorship & Origin Note -->
+  <details class="disclaimer-box">
+    <summary>
+      <span class="disclaimer-heading">📢 Authorship & Origin Disclosure</span>
+    </summary>
+    <p>
+      The <em>Prayer of the Messenger Paul</em> is preserved in the Nag Hammadi Library, Codex I (Jung Codex).
+      This presentation follows publicly available translations curated by the Gnostic Society Library and
+      scholarly editions of the Nag Hammadi texts. It is reproduced here for educational and spiritual purposes,
+      with formatting adapted to the TGK <em>Codex Reborn</em> style.
+    </p>
+    <p>
+      Archival reference: The Gnostic Society Library — Nag Hammadi Collection.
+    </p>
+    <p>🜁 Part of the <strong>Nag Hammadi Library</strong> (Egypt, 4th century), preserved by <strong>The Gnostic Vault</strong> as sacred memory.</p>
+  </details>
+
+  <div class="gnostic-divider">
+    <span class="divider-symbol pillar-glyph glow" aria-hidden="true">🜂</span>
+  </div>
+
+</section>
+</main>
+
+<!-- 🌒 Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/index.html">Home</a><span class="footer-divider">✧</span>
+      <a href="/legal/privacy.html">Privacy Policy</a><span class="footer-divider">✧</span>
+      <a href="/legal/terms.html">Terms & Conditions</a><span class="footer-divider">✧</span>
+      <a href="/legal/about.html">About</a>
+    </div>
+    <p class="footer-note">© 2025 The Gnostic Key. All Rights Reserved.</p>
+    <p class="footer-note">Published by <em>The Gnostic Key Limited</em><br>Registered in England & Wales No. 16342669</p>
+
+    <div class="footer-glyphs">
+      <span class="footer-glyph glow-soft">☉</span>
+      <span class="footer-glyph glow-soft">🜂</span>
+      <span class="footer-glyph glow-soft">☿</span>
+      <span class="footer-glyph glow-soft">✷</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Controls (Bottom Right) -->
+<div class="floating-toggles">
+  <button type="button" id="theme-toggle" class="theme-toggle-floating" aria-label="Toggle Theme">
+    <span class="icon">☀️</span>
+  </button>
+  <button type="button" id="scrollTopBtn" class="theme-toggle-floating" title="Return to Top">
+    ⬆️
+  </button>
+</div>
+
+</body>
+</html>

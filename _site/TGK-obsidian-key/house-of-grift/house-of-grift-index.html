@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- TGK Head Bootstrap: race CSS ahead to avoid FOUC -->
+  <script src="/scripts/head-bootstrap.js"></script>
+  <script src="/scripts/theme-pref.js"></script>
+
+  <!-- 2) Dynamic head marker + per-page SEO overrides -->
+  <meta data-include-head />
+  <script id="pageMeta" type="application/json">
+  {
+    "title": "House of Grift ✦ Obsidian Key | The Gnostic Key",
+    "description": "Explore the House of Grift series from The Gnostic Key, exposing royal corruption, hidden wealth, elite privilege, and the true cost of the British Crown.",
+    "ogImage": "https://thegnostickey.com/TGK-assets/images/share/obsidian-key/house-of-grift/house-of-grift-index.jpg",
+    "access": "free"
+  }
+  </script>
+
+  <!-- Page Header & breadcrumb markup -->
+  <script type="application/json" id="pageBreadcrumbs">
+  [
+    { "label": "The Gnostic Key", "href": "/index.html" },
+    { "label": "The Obsidian Key", "href": "/TGK-obsidian-key/obsidian-index.html" }
+  ]
+  </script>
+
+  <style id="tgk-critical">
+    html,body{margin:0;padding:0}
+    /* dark safety only; the actual overlay comes from vars immediately */
+    body{
+      background-color:#0b0b10;
+      background-image: var(--overlay-bg-gradient, none), var(--overlay-image, none);
+      background-position:center; background-repeat:no-repeat; background-size:cover;
+      opacity:0; transition:opacity .18s ease;
+    }
+    .site-header{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:2rem 1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.08)}
+    .site-header .header-link{color:inherit;text-decoration:none;font-weight:700}
+    .glyph-scroll{display:inline-block}
+    #mobileNav{position:fixed;inset:0 auto 0 0;width:80vw;max-width:340px;transform:translateX(-100%);transition:transform .25s ease;background:rgba(20,20,24,.98);z-index:9999}
+    #mobileNav.open{transform:translateX(0)}
+    #navOverlay{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:9998}
+    #navOverlay.active{opacity:1;pointer-events:auto}
+    .hamburger-icon{position:fixed;left:1rem;top:1rem;background:transparent;border:0;font-size:1.6rem;color:inherit;z-index:10000}
+    .floating-toggles{position:fixed;right:1rem;bottom:1rem;display:flex;gap:.5rem;z-index:10000}
+    .theme-toggle-floating{border:1px solid rgba(255,255,255,.2);background:transparent;border-radius:999px;padding:.6rem .75rem}
+  </style>
+</head>
+
+<body class="template-base obsidian"
+      data-header-title="The House of Grift Series"
+      data-header-subtitle="Exposing Royal Corruption & the True Cost of the Crown"
+      data-header-glyphs="👑, ✶, 👑">
+
+  <div id="bg-overlay" class="background-overlay"></div>
+
+  <!-- 🜁 Overlay -->
+  <div id="navOverlay"></div>
+
+  <!-- 🗝️ Slide-Out Navigation Menu -->
+  <div data-include="nav"></div>
+
+  <!-- 🔱 Header (dynamic include) -->
+  <div data-include="header"></div>
+
+  <main class="main-content">
+
+    <section class="page-title-block">
+      <p class="page-title">
+        Exposing royal corruption, elite deception, and the spiritual fraud of empire. <br>
+        Each scroll tears down the illusion of inherited power.
+      </p>
+
+      <!-- 🔽 Series Intro: House of Grift -->
+      <details class="disclaimer-box">
+        <summary>
+          <span class="disclaimer-heading">👑 About House of Grift</span>
+        </summary>
+        <p>
+          The monarchy is not a myth. It is a <strong>living extraction machine</strong>,
+          fed by legacy, protected by illusion, and sanctified through silence.
+        </p>
+        <p>
+          This series dissects the hidden architecture of royal power &mdash;
+          the money, media, immunity, and myth that shield the crown.
+        </p>
+        <p>
+          These scrolls are not gossip. They are <strong>ritual deconstructions</strong> of inherited domination.
+          To see clearly is to be free.
+        </p>
+      </details>
+    </section>
+
+    <section class="content-container">
+    <!-- 🗝️ Series Scroll Grid: House of Grift -->
+    <section class="portal-grid">
+
+      <!-- Scroll I: The British Royals -->
+      <a href="the-british-royals.html" class="gnostic-card free">
+        <div class="free-overlay">Free</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">O</div>
+          <h2 class="gnostic-card-title">Scroll I: The British Royals</h2>
+          <div class="gnostic-card-tagline">Bloodlines, deception, and a billion‑pound lie.</div>
+        </div>
+      </a>
+
+      <!-- Scroll II: Protected Predator -->
+      <a href="the-protected-predator.html" class="gnostic-card free">
+        <div class="free-overlay">Free</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🕳️</div>
+          <h2 class="gnostic-card-title">Scroll II: Protected Predator</h2>
+          <div class="gnostic-card-tagline">Prince Andrew. Epstein. A royal system of silence.</div>
+        </div>
+      </a>
+
+      <!-- Scroll III: Princess Beatrice -->
+      <a href="princess-beatrice.html" class="gnostic-card free">
+        <div class="free-overlay">Free</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🪞</div>
+          <h2 class="gnostic-card-title">Scroll III: Princess Beatrice</h2>
+          <div class="gnostic-card-tagline">The mirror, the mask, and the gatekeeper’s daughter.</div>
+        </div>
+      </a>
+
+      <!-- Scroll IV: Princess Eugenie -->
+      <a href="princess-eugenie.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">💅</div>
+          <h2 class="gnostic-card-title">Scroll IV: Princess Eugenie</h2>
+          <div class="gnostic-card-tagline">Soft power. PR royal. Hidden blood agenda.</div>
+        </div>
+      </a>
+
+      <!-- Scroll V: Duke of Kent -->
+      <a href="duke-of-kent.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">📜</div>
+          <h2 class="gnostic-card-title">Scroll V: Duke of Kent</h2>
+          <div class="gnostic-card-tagline">Masonic royalty. Keeper of ancient contracts.</div>
+        </div>
+      </a>
+
+      <!-- Scroll VI: Princess Alexandra -->
+      <a href="princess-alexandra.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🫥</div>
+          <h2 class="gnostic-card-title">Scroll VI: Princess Alexandra</h2>
+          <div class="gnostic-card-tagline">The ghost of the throne. Power in absence.</div>
+        </div>
+      </a>
+
+      <!-- Scroll VII: Duke of Gloucester -->
+      <a href="duke-of-gloucester.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🧱</div>
+          <h2 class="gnostic-card-title">Scroll VII: Duke of Gloucester</h2>
+          <div class="gnostic-card-tagline">Stone, land, blood. The royal architecture code.</div>
+        </div>
+      </a>
+
+      <!-- Scroll VIII: Queen Camilla -->
+      <a href="queen-camilla.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">🐍</div>
+          <h2 class="gnostic-card-title">Scroll VIII: Queen Camilla</h2>
+          <div class="gnostic-card-tagline">The serpent queen. Alchemy of scandal.</div>
+        </div>
+      </a>
+
+      <!-- Scroll IX: Kate Middleton -->
+      <a href="kate-middleton.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">📸</div>
+          <h2 class="gnostic-card-title">Scroll IX: Kate Middleton</h2>
+          <div class="gnostic-card-tagline">The perfect image. The missing princess.</div>
+        </div>
+      </a>
+
+      <!-- Scroll X: King Charles III -->
+      <a href="king-charles.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">👑</div>
+          <h2 class="gnostic-card-title">Scroll X: King Charles III</h2>
+          <div class="gnostic-card-tagline">Climate king. Soft tyrant. Hidden empire steward.</div>
+        </div>
+      </a>
+
+      <!-- Scroll XI: Prince William -->
+      <a href="prince-william.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">♻️</div>
+          <h2 class="gnostic-card-title">Scroll XI: Prince William</h2>
+          <div class="gnostic-card-tagline">The green heir. Symbol of synthetic future.</div>
+        </div>
+      </a>
+
+      <!-- Scroll XII: Dead Royals -->
+      <a href="dead-royals.html" class="gnostic-card coming-soon">
+        <div class="coming-soon-overlay">Coming Soon</div>
+        <div class="gnostic-card-inner">
+          <div class="gnostic-card-glyph">⚰️</div>
+          <h2 class="gnostic-card-title">Scroll XII: Dead Royals</h2>
+          <div class="gnostic-card-tagline">Bloodlines buried. Lies enshrined. Spirits unchained.</div>
+        </div>
+      </a>
+    </section>
+    </section>
+
+    <div class="gnostic-divider">
+      <span class="divider-symbol pillar-glyph spin glow" aria-hidden="true">✦</span>
+    </div>
+  </main>
+
+  <!-- 🌒 Footer (dynamic include) -->
+  <div data-include="footer"></div>
+
+  <!-- 🔧 Load the partials injector LAST -->
+  <script defer src="/scripts/partials.js"></script>
+</body>
+</html>

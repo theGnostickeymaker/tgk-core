@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="tgk-access" content="free"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Gnostic Vault | Nag Hammadi Library</title>
+
+  <!-- 🔮 Meta -->
+  <meta name="description" content="The complete Nag Hammadi Library — thirteen ancient codices buried in Egypt for 1,600 years. Explore Gnostic gospels, secret revelations, and mystical writings preserved in The Gnostic Vault." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- 🌐 Open Graph -->
+  <meta property="og:title" content="The Gnostic Vault | Nag Hammadi Library" />
+  <meta property="og:description" content="Discover the lost Gnostic scriptures of the Nag Hammadi Library — from the Gospel of Thomas to the Apocryphon of John." />
+  <meta property="og:image" content="https://thegnostickey.com/TGK-assets/images/social/tgk-vault-preview.jpg" />
+  <meta property="og:url" content="https://thegnostickey.com/TGK-vault/codex-reborn/nag-hammadi/nag-hammadi-index.html" />
+
+  <!-- 🐦 Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Gnostic Vault | Nag Hammadi Library" />
+  <meta name="twitter:description" content="Discover the lost Gnostic scriptures of the Nag Hammadi Library — from the Gospel of Thomas to the Apocryphon of John." />
+  <meta name="twitter:image" content="https://thegnostickey.com/TGK-assets/images/social/tgk-vault-preview.jpg" />
+
+
+  <!-- 🌟 Fonts & Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Libre+Baskerville&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet" />
+ 
+  <!-- Theme & Navigation -->
+    <script type="module" src="/scripts/navigation/mobile-nav.js"></script>
+    <script type="module" src="/scripts/navigation/theme.js"></script>
+
+  <!-- Firebase Config -->
+  <script type="module" src="/scripts/auth/firebase-config.js"></script>
+
+  <script type="module">
+    import { initializeAuth } from '/scripts/auth/auth.js';
+
+    const accessLevel = document.querySelector('meta[name="tgk-access"]')?.content || 'free';
+
+    initializeAuth({
+      premiumGuard: accessLevel === 'premium',
+      vaultGate: accessLevel === 'vault',
+      adminGate: accessLevel === 'admin'
+    });
+  </script>
+
+  <!-- 🎨 Core Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/gnostic-core.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/navigation/theme-toggle.css" />
+
+  <!-- 🎨 Component Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/button-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/card-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/form-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/glyph-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/quiz.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/teachings-scroll.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/components/vault-styles.css" />
+
+  <!-- 🎨 Font Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/fonts/typography-scale.css" />
+
+  <!-- 🎨 Structure Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/dashboard-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/footer-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/header-styles.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/layout-grid.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/page-structure.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/structure/visibility-gates.css" />
+
+  <!-- 🎨 Navigation Styles -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/navigation/nav-bar.css" />
+
+  <!-- 🎨 Theme Tokens -->
+  <link rel="stylesheet" href="/css/TGK-main-styles/themes/light.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/themes/dark.css" />
+  <link rel="stylesheet" href="/css/TGK-main-styles/themes/accents.css" />
+
+</head>
+
+<body class="template-base vault">
+
+<div id="bg-overlay" class="background-overlay"></div>
+<div id="top" aria-hidden="true"></div>
+    
+<!-- 🌒 Hamburger Toggle -->
+<button type="button" id="mobileToggle" class="hamburger-icon" aria-label="Open Navigation">
+  ☰
+</button>
+
+<!-- 🜁 Overlay -->
+<div id="navOverlay"></div>
+
+<!-- 🗝️ Slide-Out Navigation Menu -->
+<nav id="mobileNav" class="mobile-menu">
+  <div class="drawer-content">
+    <p class="drawer-label nolink">Navigation</p>
+    <ul class="nav-menu">
+      <li><a href="/index.html">Home</a></li>
+      <li id="dashboardLink" class="hidden">
+      <a href="/dashboard.html">Dashboard</a></li>
+
+      <li><a href="/TGK-teachings/teachings-index.html">The Teachings</a></li>
+      <li><a href="/TGK-obsidian-key/obsidian-index.html">Obsidian Key</a></li>
+      <li><a href="/TGK-gnostic-eye/gnostic-eye-index.html">Gnostic Eye</a></li>
+      <li><a href="/TGK-Audio/resonant-key-index.html">Resonant Key</a></li>
+      <li><a href="/TGK-vault/hidden-vault.html">The Vault</a></li>
+      <li><a href="/children/">Children's Corner</a></li>
+      <li><a href="/keymakers-dream/">Keymaker's Dream</a></li>
+      <li><a href="/shop/">Shop</a></li>
+      <li><a href="/community/">Community</a></li>
+      <li><a id="authLink" href="/login.html">Login</a></li>
+      <li><a id="subscribe-btn-nav" href="/subscribe.html">Subscribe</a></li>
+    </ul>
+
+    <p class="drawer-label nolink">Connect</p>
+    <div class="mobile-nav-social">
+      <a href="https://facebook.com/thegnostickey" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://instagram.com/thegnostickey" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://tiktok.com/@thegnostickey" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://youtube.com/@thegnostickey" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://twitter.com/thegnostickey" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="https://t.me/thegnostickey" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="https://thegnostickey.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔱 Header -->
+<header class="site-header minimal">
+  <div class="site-brand">
+    <a href="/index.html" class="header-link">The Gnostic Key</a>
+    <span> | </span>
+    <a href="/TGK-vault/hidden-vault.html" class="header-link">The Gnostic Vault</a>
+    <span> | </span>
+    <a href="/TGK-vault/codex-reborn/codex-reborn-index.html" class="header-link">Codex Reborn</a>
+  </div>
+
+  <div class="glyph-scroll" aria-hidden="true">📜</div>
+
+  <h3 class="main-logo-scroll">
+    <a href="/TGK-vault/codex-reborn/nag-hammadi/nag-hammadi-index.html" class="header-link">
+      The Nag Hammadi Library
+    </a>
+  </h3>
+
+  <h1 class="main-tagline-scroll">
+    Lost Gospels, Secret Revelations,<br>and the Recovery of Gnosis
+  </h1>
+</header>
+
+
+<main class="main-content">
+  <div class="content-container">
+
+    <!-- 🗄️ Vault Intro: Nag Hammadi Library -->
+    <section class="page-title-block">
+      <p class="page-title">
+        Enter the buried chamber.<br>
+        Thirteen leather-bound codices hidden in the sands of Egypt for over 1,600 years.<br>
+        This is the <strong>Nag Hammadi Library</strong>, preserved in the Vault of The Gnostic Key
+      </p>
+    </section>
+
+    <!-- 📘 About the Nag Hammadi Library -->
+    <details class="disclaimer-box">
+      <summary>
+        <span class="disclaimer-heading">📘 About the Nag Hammadi Library</span>
+      </summary>
+      <p>The <strong>Nag Hammadi Library</strong> is one of the greatest archaeological finds of the 20th century — a sealed jar of ancient Gnostic manuscripts unearthed near the Nile in 1945.</p>
+      <p>Within these codices are secret gospels, mystical treatises, and cosmic revelations that were hidden from the orthodox canon. Here, you will find the preserved voices of a suppressed tradition — rendered in sacred formatting for the digital temple of <strong>The Gnostic Key</strong>.</p>
+    </details>
+
+    <!-- =============================== -->
+    <!-- 📚 Codex I -->
+<h2 class="codex-heading"><strong>Codex I - The Jung Codex</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex I</span></summary>
+  <p>Codex I, known as the <em>Jung Codex</em>, was the first to be acquired after the discovery, gifted to the C.G. Jung Institute in Zürich. It contains five treatises, including meditations on truth, resurrection, and Valentinian theology.</p>
+</details>
+
+<section class="portal-grid">
+  <a href="/TGK-vault/codex-reborn/nag-hammadi/Prayer-of-apostle-paul.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🙏</div>
+      <h2 class="gnostic-card-title">The Prayer of the Apostle Paul</h2>
+      <p class="gnostic-card-tagline">A short invocation to the mind of the Father.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">✉️</div>
+      <h2 class="gnostic-card-title">The Apocryphon of James</h2>
+      <p class="gnostic-card-tagline">Private teachings of Jesus to James and Peter.</p>
+    </div>
+  </a>
+
+  <a href="/TGK-vault/codex-reborn/nag-hammadi/gospel-of-truth.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🧠</div>
+      <h2 class="gnostic-card-title">The Gospel of Truth</h2>
+      <p class="gnostic-card-tagline">A mystical meditation on truth, ignorance, and redemption, associated with Valentinian circles.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌅</div>
+      <h2 class="gnostic-card-title">Treatise on the Resurrection</h2>
+      <p class="gnostic-card-tagline">A pastoral letter on living resurrection.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🔺</div>
+      <h2 class="gnostic-card-title">Tripartite Tractate</h2>
+      <p class="gnostic-card-tagline">Valentinian theology in grand architecture.</p>
+    </div>
+  </a>
+</section>
+
+    <!-- =============================== -->
+<!-- 📚 Codex II -->
+<h2 class="codex-heading"><strong>Codex II</strong></h2>
+<details class="disclaimer-box">
+  <summary>
+    <span class="disclaimer-heading">📜 About Codex II</span>
+  </summary>
+  <p>Codex II is perhaps the most famous of the Nag Hammadi manuscripts, containing the <em>Gospel of Thomas</em>, the <em>Apocryphon of John</em>, and other foundational Sethian works. These texts map the divine realms, reveal the origin of the archons, and speak in the voice of hidden wisdom.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="/TGK-vault/codex-reborn/nag-hammadi/apocryphon-of-john.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">👁️</div>
+      <h2 class="gnostic-card-title">The Apocryphon of John</h2>
+      <p class="gnostic-card-tagline">Secret revelation to John by the risen Christ, mapping the divine realms and origin of the demiurge.</p>
+    </div>
+  </a>
+
+  <a href="/TGK-vault/codex-reborn/nag-hammadi/gospel-of-thomas.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📜</div>
+      <h2 class="gnostic-card-title">The Gospel of Thomas</h2>
+      <p class="gnostic-card-tagline">114 sayings of the Living Jesus, preserved outside the biblical canon. Essential Gnostic text.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">💠</div>
+      <h2 class="gnostic-card-title">The Gospel of Philip</h2>
+      <p class="gnostic-card-tagline">Sacraments, union, and bridal chamber mysticism.</p>
+    </div>
+  </a>
+
+  <a href="/TGK-vault/codex-reborn/nag-hammadi/hypostasis-of-the-archons.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">⚔️</div>
+      <h2 class="gnostic-card-title">The Hypostasis of the Archons</h2>
+      <p class="gnostic-card-tagline">A cosmic critique of the rulers (archons): their origin, weakness, and fate.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌍</div>
+      <h2 class="gnostic-card-title">On the Origin of the World</h2>
+      <p class="gnostic-card-tagline">Mythic origins of matter and the archons.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">💧</div>
+      <h2 class="gnostic-card-title">Exegesis on the Soul</h2>
+      <p class="gnostic-card-tagline">Fall, exile, repentance, and return.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🥊</div>
+      <h2 class="gnostic-card-title">Book of Thomas the Contender</h2>
+      <p class="gnostic-card-tagline">Ascetic combat and the inner opponent.</p>
+    </div>
+  </a>
+
+</section>
+
+
+    <!-- =============================== -->
+<!-- 📚 Codex III -->
+<h2 class="codex-heading"><strong>Codex III</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex III</span></summary>
+  <p>Codex III preserves early Christian and Sethian works, including dialogues with the Saviour, revelations of Sophia, and mythic accounts of the world's origin. These writings interweave poetry, cosmogony, and initiatory teaching.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="apocryphon-of-john-short.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📜</div>
+      <h2 class="gnostic-card-title">The Apocryphon of John (Short)</h2>
+      <p class="gnostic-card-tagline">The secret revelation to John the Apostle.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌐</div>
+      <h2 class="gnostic-card-title">The Gospel of the Egyptians</h2>
+      <p class="gnostic-card-tagline">A cosmic hymn of Sethian creation.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">✨</div>
+      <h2 class="gnostic-card-title">Eugnostos the Blessed</h2>
+      <p class="gnostic-card-tagline">A philosophical vision of the divine realm.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🕊️</div>
+      <h2 class="gnostic-card-title">Sophia of Jesus Christ</h2>
+      <p class="gnostic-card-tagline">Cosmogony through the voice of Wisdom.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">💬</div>
+      <h2 class="gnostic-card-title">Dialogue of the Saviour</h2>
+      <p class="gnostic-card-tagline">Questions of the soul, paths of ascent.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex IV -->
+<h2 class="codex-heading"><strong>Codex IV</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex IV</span></summary>
+  <p>Codex IV contains an expanded account of the secret revelation to John, alongside a Sethian gospel that celebrates the cosmic order and divine origins of humanity.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="apocryphon-of-john-long.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📜</div>
+      <h2 class="gnostic-card-title">The Apocryphon of John (Long)</h2>
+      <p class="gnostic-card-tagline">The full revelation of the risen Christ to John.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌐</div>
+      <h2 class="gnostic-card-title">The Gospel of the Egyptians</h2>
+      <p class="gnostic-card-tagline">A cosmic hymn of Sethian creation.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex V -->
+<h2 class="codex-heading"><strong>Codex V</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex V</span></summary>
+  <p>Codex V gathers visionary revelations and martyr-teachings, including apocalypses attributed to Paul, James, and Adam, together with the wisdom treatise Eugnostos.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">✨</div>
+      <h2 class="gnostic-card-title">Eugnostos the Blessed</h2>
+      <p class="gnostic-card-tagline">A serene discourse on the unknowable.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📜</div>
+      <h2 class="gnostic-card-title">The Apocalypse of Paul</h2>
+      <p class="gnostic-card-tagline">The apostle’s ascent through the heavens.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🕊️</div>
+      <h2 class="gnostic-card-title">The First Apocalypse of James</h2>
+      <p class="gnostic-card-tagline">Secret teaching to James the Just.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🕊️</div>
+      <h2 class="gnostic-card-title">The Second Apocalypse of James</h2>
+      <p class="gnostic-card-tagline">Trials, revelations, and release.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌿</div>
+      <h2 class="gnostic-card-title">The Apocalypse of Adam</h2>
+      <p class="gnostic-card-tagline">Adam’s testament against the archons.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex VI -->
+<h2 class="codex-heading"><strong>Codex VI</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex VI</span></summary>
+  <p>Codex VI blends apostolic acts, visionary hymns, and Hermetic dialogues. It includes the poetic voice of the divine feminine, esoteric teachings on cosmic power, and Platonic philosophy adapted for Gnostic initiation.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">✝️</div>
+      <h2 class="gnostic-card-title">The Acts of Peter and the Twelve Apostles</h2>
+      <p class="gnostic-card-tagline">Apostolic mission and symbolic healing.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">⚡</div>
+      <h2 class="gnostic-card-title">The Thunder, Perfect Mind</h2>
+      <p class="gnostic-card-tagline">The paradoxical voice of divine Wisdom.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📜</div>
+      <h2 class="gnostic-card-title">Authoritative Teaching</h2>
+      <p class="gnostic-card-tagline">A reflection on truth and deception.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌌</div>
+      <h2 class="gnostic-card-title">The Concept of Our Great Power</h2>
+      <p class="gnostic-card-tagline">A cosmic drama of fall and restoration.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🏛️</div>
+      <h2 class="gnostic-card-title">Plato, Republic 588A–589B</h2>
+      <p class="gnostic-card-tagline">Philosophic allegory adapted for Gnostic use.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🔮</div>
+      <h2 class="gnostic-card-title">The Discourse on the Eighth and Ninth</h2>
+      <p class="gnostic-card-tagline">Hermetic ascent through the spheres.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🙏</div>
+      <h2 class="gnostic-card-title">The Prayer of Thanksgiving</h2>
+      <p class="gnostic-card-tagline">A hymn of gratitude for divine gnosis.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">⚕️</div>
+      <h2 class="gnostic-card-title">Asclepius 21–29</h2>
+      <p class="gnostic-card-tagline">Hermetic teaching on the fate of the world.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex VII -->
+<h2 class="codex-heading"><strong>Codex VII</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex VII</span></summary>
+  <p>Codex VII preserves a rich blend of Sethian revelations, apocalyptic visions, moral instruction, and mystical hymns. These works present cosmic battles, spiritual ascent, and the mysteries of the divine order.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌀</div>
+      <h2 class="gnostic-card-title">The Paraphrase of Shem</h2>
+      <p class="gnostic-card-tagline">A vision of light and darkness in cosmic struggle.</p>
+    </div>
+  </a>
+
+  <a href="second-treatise-of-the-great-seth.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📜</div>
+      <h2 class="gnostic-card-title">The Second Treatise of the Great Seth</h2>
+      <p class="gnostic-card-tagline">Christ’s proclamation against the powers.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌌</div>
+      <h2 class="gnostic-card-title">The Apocalypse of Peter</h2>
+      <p class="gnostic-card-tagline">A prophetic vision of the true kingdom.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📖</div>
+      <h2 class="gnostic-card-title">The Teachings of Silvanus</h2>
+      <p class="gnostic-card-tagline">Wisdom for the moral and spiritual life.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🔺</div>
+      <h2 class="gnostic-card-title">The Three Steles of Seth</h2>
+      <p class="gnostic-card-tagline">Hymns of praise to the divine Father.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex VIII -->
+<h2 class="codex-heading"><strong>Codex VIII</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex VIII</span></summary>
+  <p>Codex VIII preserves a major Sethian visionary ascent text alongside an apostolic letter urging unity and steadfastness in the face of opposition.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌠</div>
+      <h2 class="gnostic-card-title">Zostrianos</h2>
+      <p class="gnostic-card-tagline">A vast visionary journey through the heavenly realms.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📜</div>
+      <h2 class="gnostic-card-title">The Letter of Peter to Philip</h2>
+      <p class="gnostic-card-tagline">An apostolic call to courage and unity.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex IX -->
+<h2 class="codex-heading"><strong>Codex IX</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex IX</span></summary>
+  <p>Codex IX contains a royal priestly revelation, a brief poetic hymn to the saviour figure Norea, and a polemical treatise contrasting true knowledge with false belief.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">👑</div>
+      <h2 class="gnostic-card-title">Melchizedek</h2>
+      <p class="gnostic-card-tagline">The heavenly priest-king’s revelation.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">💭</div>
+      <h2 class="gnostic-card-title">The Thought of Norea</h2>
+      <p class="gnostic-card-tagline">A hymn to the saviour’s divine consort.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">⚖️</div>
+      <h2 class="gnostic-card-title">The Testimony of Truth</h2>
+      <p class="gnostic-card-tagline">A sharp contrast between true and false faith.</p>
+    </div>
+  </a>
+
+</section>
+
+<!-- 📚 Codex X -->
+<h2 class="codex-heading"><strong>Codex X</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex X</span></summary>
+  <p>Codex X preserves the complex revelatory discourse of Marsanes, a Sethian text exploring cosmology, the soul’s ascent, and the nature of the spiritual elite.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌌</div>
+      <h2 class="gnostic-card-title">Marsanes</h2>
+      <p class="gnostic-card-tagline">Cosmic mysteries and the ascent of the spirit.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex XI -->
+<h2 class="codex-heading"><strong>Codex XI</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex XI</span></summary>
+  <p>Codex XI brings together Valentinian sacramental teaching, a Sethian visionary ascent text, and a short enigmatic dialogue. It explores the mysteries of anointing, baptism, and the Eucharist, as well as the journey of the soul beyond the cosmic rulers.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📖</div>
+      <h2 class="gnostic-card-title">The Interpretation of Knowledge</h2>
+      <p class="gnostic-card-tagline">A reflection on true knowledge and its preservation.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">✝️</div>
+      <h2 class="gnostic-card-title">A Valentinian Exposition</h2>
+      <p class="gnostic-card-tagline">Teachings on anointing, baptism, and the Eucharist.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌠</div>
+      <h2 class="gnostic-card-title">Allogenes – The Foreigner</h2>
+      <p class="gnostic-card-tagline">A visionary journey into the unknowable realms.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌀</div>
+      <h2 class="gnostic-card-title">Hypsiphrone</h2>
+      <p class="gnostic-card-tagline">An enigmatic dialogue on desire and ascent.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex XII -->
+<h2 class="codex-heading"><strong>Codex XII</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex XII</span></summary>
+  <p>Codex XII contains a collection of ethical maxims, a poetic gospel of mystical insight, and surviving fragments from other lost works.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">💬</div>
+      <h2 class="gnostic-card-title">The Sentences of Sextus</h2>
+      <p class="gnostic-card-tagline">Wisdom sayings on virtue and self-discipline.</p>
+    </div>
+  </a>
+
+  <a href="/TGK-vault/codex-reborn/nag-hammadi/gospel-of-truth.html" class="gnostic-card">
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">📜</div>
+      <h2 class="gnostic-card-title">The Gospel of Truth</h2>
+      <p class="gnostic-card-tagline">A hymn to knowledge and divine restoration.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🧩</div>
+      <h2 class="gnostic-card-title">Fragments</h2>
+      <p class="gnostic-card-tagline">Surviving excerpts from lost works.</p>
+    </div>
+  </a>
+
+</section>
+
+
+<!-- 📚 Codex XIII -->
+<h2 class="codex-heading"><strong>Codex XIII</strong></h2>
+<details class="disclaimer-box">
+  <summary><span class="disclaimer-heading">📜 About Codex XIII</span></summary>
+  <p>Codex XIII contains a revelatory hymn of the divine First Thought in three forms, alongside an alternate version of the mythic creation account found in Codex II.</p>
+</details>
+
+<section class="portal-grid">
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🔺</div>
+      <h2 class="gnostic-card-title">Trimorphic Protennoia</h2>
+      <p class="gnostic-card-tagline">The threefold self-revelation of divine Thought.</p>
+    </div>
+  </a>
+
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">🌍</div>
+      <h2 class="gnostic-card-title">On the Origin of the World</h2>
+      <p class="gnostic-card-tagline">Mythic origins of matter and the archons.</p>
+    </div>
+  </a>
+
+</section>
+
+    <div class="gnostic-divider">
+      <span class="divider-symbol pillar-glyph spin glow" aria-hidden="true">🜂</span>
+    </div>
+  </main>
+
+  <!-- 🌒 Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/index.html">Home</a><span class="footer-divider">✧</span>
+        <a href="/legal/privacy.html">Privacy Policy</a><span class="footer-divider">✧</span>
+        <a href="/legal/terms.html">Terms & Conditions</a><span class="footer-divider">✧</span>
+      </div>
+      <p class="footer-note">© 2025 The Gnostic Key. All Rights Reserved.</p>
+      <br>
+      <p class="footer-note">Published by <em>The Gnostic Key Limited</em><br>Registered in England & Wales No. 16342669</p>
+
+      <div class="footer-glyphs">
+        <span class="footer-glyph glow-soft">☉</span>
+        <span class="footer-glyph glow-soft">🜂</span>
+        <span class="footer-glyph glow-soft">☿</span>
+        <span class="footer-glyph glow-soft">✷</span>
+      </div>
+    </div>
+  </footer>
+
+<!-- Floating Controls (Bottom Right) -->
+<div class="floating-toggles">
+    <button type="button" id="theme-toggle" class="theme-toggle-floating" aria-label="Toggle Theme">
+    <span class="icon">☀️</span>
+  </button><button type="button" id="scrollTopBtn" class="theme-toggle-floating" title="Return to Top">
+    ⬆️
+  </button>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* header_styles.css – Refactored for TGK Theme System */
+/* Version: 2.1 – Token fix and verification */
+
+.site-brand {
+  font-family: var(--font-display);
+  color: var(--text-accent);
+  font-size: calc(var(--font-size-logo) * 0.7); /* reduce size by ~30% */
+  text-align: center;
+  opacity: 0.75; /* slightly lower opacity for subtlety */
+  margin-bottom: var(--space-md); /* tighten the spacing */
+  background: linear-gradient(to right, transparent, var(--highlight), transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.site-header {
+  background: linear-gradient(to top, var(--bg-secondary), var(--bg-primary));
+  border-bottom: 2px solid var(--text-accent);
+  padding: var(--space-xl) var(--space-md) var(--space-sm);
+  text-align: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.site-header.minimal {
+  background-color: var(--bg-primary);
+  padding: var(--space-md) var(--space-md); 
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  border-bottom: var(--header-border-bottom, 2px solid var(--text-accent));
+  box-shadow: var(--header-box-shadow, 0 2px 20px rgba(255, 215, 150, 0.08));
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}
+
+.main-logo {
+  color: var(--text-accent);
+  font-family: var(--font-display);
+  font-size: var(--font-size-logo);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 1rem 0 0.5rem;
+}
+
+.main-tagline {
+  font-family: var(--font-serif);
+  color: var(--text-accent);
+  font-size: var(--font-siza-xl);
+  font-style: italic;
+  text-align: center;
+  opacity: 0.85;
+  margin-bottom: var(--space-lg);
+  background: linear-gradient(to right, transparent, var(--highlight), transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Header Link Styling */
+.header-link {
+  background: none;
+  padding: var(--space-xl) var(--space-md) var(--space-sm);
+  text-align: center;
+  position: relative;
+  line-height: 1.2;
+  z-index: 1000;
+}
+
+.header-link:hover {
+  text-decoration: underline; /* optional: or add a glow, color change, etc. */
+}
+
+/* ===================================================
+   📍 Breadcrumb Navigation Slot – Fully Tokenised
+   =================================================== */
+.breadcrumb-slot {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.breadcrumb-slot a {
+  color: var(--text-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-default), text-shadow var(--transition-default);
+}
+
+.breadcrumb-slot a:hover,
+.breadcrumb-slot a:focus {
+  color: var(--highlight);
+  text-shadow: 0 0 6px var(--shadow-glow);
+}
+
+.breadcrumb-slot span {
+  color: var(--text-accent);
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+/* ----------------------------------------
+   📱 Responsive Scaling
+---------------------------------------- */
+@media (max-width: 768px) {
+  .breadcrumb-slot {
+    font-size: calc(var(--font-size-base, 1rem) * 0.8);
+    gap: var(--space-xs);
+  }
+}
+
+

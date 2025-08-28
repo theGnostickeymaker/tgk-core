@@ -1,0 +1,50 @@
+/* ===================================================
+   TGK Footer Styles – Symmetrical Closing
+   Version: 2.0 – Sacred Footer
+   =================================================== */
+
+   .site-footer {
+	background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+	border-top: 2px solid var(--text-accent);
+	padding: var(--space-lg) var(--space-md);
+	text-align: center;
+  }
+  
+  .footer-links {
+	margin-bottom: var(--space-md);
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: 1rem;
+  }
+  
+  .footer-links a {
+	color: var(--text-accent);
+	text-decoration: none;
+	margin: 0 0.25rem;
+  }
+  
+  .footer-divider {
+	color: var(--highlight);
+	margin: var(--space-sm);
+  }
+  
+  .footer-note {
+	font-family: var(--font-serif);
+	font-size: 0.9rem;
+	color: var(--text-primary);
+	opacity: 0.75;
+	margin: var(--space-sm) 0;
+  }
+  
+  .footer-glyphs {
+	margin-top: var(--space-md);
+  }
+  
+  .footer-glyph {
+	font-size: var(--glyph-size-small);
+	margin: 0 0.25rem;
+	color: var(--text-accent);
+	text-shadow: 0 0 6px var(--shadow-glow);
+  }
+  
+

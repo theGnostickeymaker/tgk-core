@@ -1,0 +1,66 @@
+/* ===================================================
+   Unified Floating Buttons – Theme + Scroll Top
+   Class: .theme-toggle-floating
+   Version: 1.2 – Final Unified Styling
+   =================================================== */
+
+/* Default: bottom right on desktop */
+.floating-toggles {
+  position: fixed;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-sm);
+  z-index: 9999;
+}
+
+/* Top right on mobile & tablet */
+@media (max-width: 1024px) {
+  .floating-toggles {
+    top: var(--space-md);
+    bottom: auto;
+    right: var(--space-md);
+    left: auto;
+  }
+}
+
+.theme-toggle-floating {
+  background-color: transparent;
+  color: var(--text-accent);
+  width: var(--toggle-size, 3rem);
+  height: var(--toggle-size, 3rem);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-toggle, 1.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--shadow-glow);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  border: none;
+  outline: none;
+}
+
+.theme-toggle-floating:hover {
+  transform: scale(1.1);
+  background-color: var(--highlight);
+  color: var(--bg-primary);
+}
+
+/* Click / Active pulse (no state lock-in) */
+.theme-toggle-floating:active {
+  animation: pulseToggle 0.6s ease-out;
+}
+
+@keyframes pulseToggle {
+  0%   { box-shadow: 0 0 0 0 var(--shadow-glow); }
+  70%  { box-shadow: 0 0 0 12px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+  
+html[data-theme="dark"] .theme-toggle-floating {
+  background-color: rgba(255, 255, 255, 0.05);
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- TGK Head Bootstrap: race CSS ahead to avoid FOUC -->
+  <script src="/scripts/head-bootstrap.js"></script>
+  <script src="/scripts/theme-pref.js"></script>
+  
+  <!-- 2) Dynamic head marker + per-page SEO overrides -->
+  <meta data-include-head />
+  <script id="pageMeta" type="application/json">
+  {
+    "title": "The Teachings ✦ Sacred Studies, Clear Maps | The Gnostic Key",
+    "description": "The Teachings is TGK’s study hall: structured series, practice guides, and reading paths. Start with the Afterlife Series, then explore new curricula as they unlock.",
+    "ogImage": "https://thegnostickey.com/TGK-assets/images/share/the-teachings/teachings-index.jpg",
+    "canonicalUrl": "https://thegnostickey.com/tgk-teachings/teachings-index.html",
+    "access": "free",
+    "publishedTime": "2025-05-20"
+  }
+  </script>
+
+  <!-- Page Header & breadcrumb markup -->
+  <script type="application/json" id="pageBreadcrumbs">
+  [
+    { "label": "The Gnostic Key", "href": "/index.html" }
+  ]
+  </script>
+
+  <style id="tgk-critical">
+    html,body{margin:0;padding:0}
+    body{
+      background-color:#0b0b10;
+      background-image: var(--overlay-bg-gradient, none), var(--overlay-image, none);
+      background-position:center; background-repeat:no-repeat; background-size:cover;
+      opacity:0; transition:opacity .18s ease;
+    }
+    .site-header{display:flex;flex-direction:column;align-items:center;gap:.4rem;padding:2rem 1rem 1.25rem;border-bottom:1px solid rgba(255,255,255,.08)}
+    .site-header .header-link{color:inherit;text-decoration:none;font-weight:700}
+    .glyph-scroll{display:inline-block}
+    #mobileNav{position:fixed;inset:0 auto 0 0;width:80vw;max-width:340px;transform:translateX(-100%);transition:transform .25s ease;background:rgba(20,20,24,.98);z-index:9999}
+    #mobileNav.open{transform:translateX(0)}
+    #navOverlay{position:fixed;inset:0;background:rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:9998}
+    #navOverlay.active{opacity:1;pointer-events:auto}
+    .hamburger-icon{position:fixed;left:1rem;top:1rem;background:transparent;border:0;font-size:1.6rem;color:inherit;z-index:10000}
+    .floating-toggles{position:fixed;right:1rem;bottom:1rem;display:flex;gap:.5rem;z-index:10000}
+    .theme-toggle-floating{border:1px solid rgba(255,255,255,.2);background:transparent;border-radius:999px;padding:.6rem .75rem}
+
+    /* Minimal grid/callouts for this index */
+    .intro-wrap{max-width:1100px;margin:0 auto;padding:2rem 1rem}
+    .series-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;max-width:1200px;margin:0 auto;padding:1rem}
+    .gnostic-card{position:relative;display:block;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.1rem;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));text-decoration:none;color:inherit;transition:transform .15s ease, box-shadow .2s ease}
+    .gnostic-card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.28)}
+    .gnostic-card-glyph{font-size:1.6rem;opacity:.9}
+    .gnostic-card-title{margin:.4rem 0 .25rem 0;font-size:1.1rem;font-weight:700}
+    .gnostic-card-tagline{opacity:.8;font-size:.95rem;line-height:1.35}
+    .coming-soon-overlay{position:absolute;right:.6rem;top:.6rem;font-size:.75rem;border:1px solid rgba(255,255,255,.2);padding:.25rem .5rem;border-radius:999px;opacity:.85}
+
+    .callout{max-width:1100px;margin:1.5rem auto;padding:1rem 1.25rem;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015))}
+    .cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+    .btn{display:inline-flex;gap:.4rem;align-items:center;border-radius:999px;padding:.6rem .9rem;border:1px solid rgba(255,255,255,.2);text-decoration:none}
+    .btn-gold{border-color:var(--text-accent,#d4b86a)}
+
+    .legend{max-width:1000px;margin:1rem auto 2rem auto;padding:0 1rem;opacity:.9;font-size:.95rem}
+  </style>
+</head>
+
+<body class="template-base gold"
+      data-header-title="The Teachings"
+      data-header-subtitle="Sacred Studies ✦ Charting the Unknown Shores of the Soul"
+      data-header-glyphs="✶, ☉, ✶">
+
+  <div id="bg-overlay" class="background-overlay"></div>
+
+  <!-- 🜁 Overlay -->
+  <div id="navOverlay"></div>
+
+  <!-- 🗝️ Slide-Out Navigation Menu -->
+  <div data-include="nav"></div>
+
+  <!-- 🔱 Header (dynamic include) -->
+  <div data-include="header"></div>
+
+  <main class="main-content">
+
+    <section class="page-title-block intro-wrap">
+  <p class="page-title">
+    The Teachings is our sacred study hall — curated scrolls, living practice libraries, and luminous maps for the seeker’s path. Begin with the Afterlife Series, then follow the branching curricula as they unlock.
+  </p>
+
+  <details class="disclaimer-box">
+    <summary>
+      <span class="disclaimer-heading">🪬 About The Teachings</span>
+    </summary>
+    <p>
+      We share the core lineages with reverence for their spirit and relevance for the modern journey. Each series pairs <strong>clear maps</strong> with <strong>practice prompts</strong>, and connects to <em>The Vault</em> for original, unaltered texts.
+    </p>
+  </details>
+</section>
+
+
+  <section class="content-container">
+
+    <section class="portal-grid">
+
+  <!-- The Afterlife Series -->
+  <a href="the-afterlife/afterlife-index.html" class="gnostic-card">
+    <div class="gnostic-card-glyph">☉</div>
+    <h2 class="gnostic-card-title">The Afterlife Series</h2>
+    <div class="gnostic-card-tagline">Death is not the end. It's the map home.</div>
+  </a>
+
+  <!-- The Hidden Architecture of Reality -->
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">👁</div>
+      <h2 class="gnostic-card-title">The Hidden Architecture of Reality</h2>
+      <div class="gnostic-card-tagline">Sacred codes, veiled dimensions, and the great energetic war.</div>
+    </div>
+  </a>
+
+  <!-- Breaking Out of the System -->
+  <a href="#" class="gnostic-card coming-soon">
+    <div class="coming-soon-overlay">Coming Soon</div>
+    <div class="gnostic-card-inner">
+      <div class="gnostic-card-glyph">👁</div>
+      <h2 class="gnostic-card-title">Breaking Out of the System</h2>
+      <div class="gnostic-card-tagline">Deprogramming the soul. Reclaiming spiritual agency.</div>
+    </div>
+  </a>
+</section>
+</section>
+
+<div class="gnostic-divider">
+  <span class="divider-symbol pillar-glyph spin glow" aria-hidden="true">✦</span>
+</div>
+
+</section>
+
+<!-- 🌒 Footer (dynamic include) -->
+<div data-include="footer"></div>
+
+<!-- 🔧 Load the partials injector LAST -->
+<script defer src="/scripts/partials.js"></script>
+</body>
+</html>

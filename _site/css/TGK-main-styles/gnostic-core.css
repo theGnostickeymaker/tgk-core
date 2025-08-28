@@ -1,0 +1,333 @@
+:root {
+   /* ===================================
+      🕯️ Typography – Fonts & Sizes
+   =================================== */
+   --font-serif: 'Libre Baskerville', serif;
+   --font-display: 'Cinzel', serif;
+   --page-title: 'Cormorant Garamond', serif;
+ 
+   --font-size-base: 1rem;
+   --font-size-vs: 0.8rem;
+   --font-size-sm: 1rem;
+   --font-size-lg: 1.5rem;
+   --font-size-xl: 1.75rem;
+   --font-size-logo: 2rem;
+   --font-size-nav: 1.1rem;
+   --font-size-toggle: 1.2rem;
+ 
+   --font-base-size: 1.05rem;
+   --font-base-line: 1.85;
+   --font-small: 0.95rem;
+ 
+   --font-size-form-label: var(--font-small);
+ 
+   /* ===================================
+      🎨 Core Colors & Accents
+   =================================== */
+   --text-primary: #1a1a1a;
+   --text-secondary: #777;
+   --text-accent: #5e412f;
+ 
+   --bg-primary: #fff7e6;
+   --bg-secondary: #f3efe6;
+   --surface-alt: #f9f5ec;
+ 
+   --gold-accent: #c9aa71;
+   --purple-accent: #8b6fc1;
+   --vault-accent: #5a4b91;
+ 
+   --highlight: #7a5c45;
+   --shadow-glow: rgba(212, 175, 55, 0.2);
+   --accent-glow: #d4c186;
+   --accent-soft: #9f8f72;
+ 
+   --soft-gold: #e5c47a;
+   --golden-blaze: #f6d66e;
+   --base-dark: #1a1a1a;
+
+   --accent-main: var(--text-accent);
+   --accent-glow: var(--highlight);
+   --accent-soft-glow: var(--shadow-glow);
+
+ 
+   /* ===================================
+      ✴️ Section Styling
+   =================================== */
+   --section-subtitle-color: var(--text-secondary);
+   --welcome-text: var(--text-accent);
+   --door-callout-color: var(--text-primary);
+   --scroll-title-margin: 2rem;
+   --scroll-border-radius: 12px;
+   --scroll-box-shadow: 0 0 25px var(--shadow-glow);
+   --scroll-shadow-soft: 0 1px 3px rgba(0, 0, 0, 0.05);
+   --cite-color: var(--highlight);
+
+ 
+   /* ===================================
+      📜 Forms & Inputs
+   =================================== */
+   --input-bg: #f7f5f0;
+   --input-bg-focus: #fffdf9;
+   --input-border: #2a2a2a;
+   --input-focus: var(--text-accent);
+   --input-placeholder: #b49e7a;
+   --input-text: var(--text-primary);
+   --input-padding: 0.85rem 1.1rem;
+ 
+   --form-error-color: #d63c3c;
+   --form-success-color: #32a862;
+ 
+   --auth-padding: var(--space-xl);
+   --auth-radius: var(--border-radius-base);
+ 
+   /* ===================================
+      🧱 Spacing & Layout
+   =================================== */
+   --space-xs: 0.25rem;
+   --space-sm: 0.5rem;
+   --space-md: 1rem;
+   --space-lg: 2rem;
+   --space-xl: 3rem;
+ 
+   --floating-margin: var(--space-lg);
+   --meta-padding: var(--space-sm) var(--space-md);
+   --grid-max-width: 1100px;
+   --max-width-container: 1400px;
+ 
+   /* ===================================
+      🔹 Glyphs & Symbols
+   =================================== */
+   --glyph-size-small: 1.6rem;
+   --glyph-size-base: 2.2rem;
+   --glyph-size-large: 3rem;
+   --glyph-margin-bottom: 1rem;
+   --glyph-color: var(--text-accent);
+   --strong-text: var(--text-accent);
+
+ 
+   /* ===================================
+      🪄 Buttons & UI Elements
+   =================================== */
+   --btn-font: var(--font-display);
+   --btn-radius: var(--border-radius-base);
+   --btn-padding: 0.65rem 1.2rem;
+   --btn-padding-lg: 0.75rem 1.5rem;
+   --btn-shadow: var(--shadow-glow);
+   --btn-max-width: 320px;
+ 
+   --cta-radius: 6px;
+   --cta-padding: 0.75rem 1.5rem;
+   --cta-font-size: 1rem;
+   --cta-font-weight: bold;
+ 
+   --toggle-size: 2.625rem;
+
+   --radius-md: 6px;
+ 
+   /* ===================================
+      📘 Quiz & Feedback
+   =================================== */
+   --quiz-wrong-bg: rgba(255, 0, 0, 0.08);
+   --quiz-wrong-bg-heavy: rgba(255, 0, 0, 0.1);
+   --quiz-wrong-text: #cc4444;
+   --quiz-outline-selected: var(--highlight);
+   --quiz-reveal-text: var(--highlight);
+   
+ 
+   /* ===================================
+      🧾 Cards & Actions
+   =================================== */
+   --card-action-bg: var(--text-accent);
+   --card-action-text: var(--bg-primary);
+   --card-action-hover: var(--highlight);
+ 
+   /* ===================================
+      ✒️ Glossary & Rituals
+   =================================== */
+   --glossary-indent: 1rem;
+   --ritual-padding-left: 0.5rem;
+   --ritual-margin-bottom: 1.25rem;
+   --ritual-font-size: 1.05rem;
+ 
+   --thesis-padding: var(--space-lg);
+   --thesis-border: 4px solid var(--text-accent);
+ 
+   /* ===================================
+      🦶 Footer
+   =================================== */
+   --footer-padding: var(--space-lg) var(--space-md);
+   --footer-font-size: var(--font-size-sm);
+   --footer-divider-spacing: var(--space-sm);
+   --footer-glyph-size: var(--glyph-size-small);
+ 
+   /* ===================================
+      🌀 Core Transitions & Borders
+   =================================== */
+   --border-radius-base: 0.5rem;
+   --border-radius-lg: 1rem;
+   --transition-default: all 0.3s ease;
+
+   /* ===================================
+      🌀 Banner Overlay Positioning
+   =================================== */
+
+   --overlay-left-shift: -2.7rem;
+   --overlay-width: 200px;
+ }
+ 
+    /* ===================================
+      🌀 Scroll Padding
+   =================================== */
+   html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--space-lg); /* or a fixed value like 60px */
+    }
+    
+/* ===================================================
+   🔖 Bookmark Tag – Universal + Scroll Header Styles
+   Version: 1.2
+   =================================================== */
+
+   /* Standard floating bookmark (e.g. in card corners or sections) */
+   .bookmark-floating {
+   text-align: right;
+   margin-bottom: var(--space-sm);
+   }
+
+   /* Core Button Style */
+   .bookmark-tag {
+   background: none;
+   border: none;
+   cursor: pointer;
+   color: var(--text-accent);
+   font-size: var(--font-size-base);
+   padding: 0.25rem;
+   transition: color 0.2s ease, transform 0.2s ease;
+   }
+
+   /* Active / Saved State */
+   .bookmark-tag.bookmarked {
+   color: var(--highlight);
+   }
+
+   /* Hover Feedback */
+   .bookmark-tag:hover {
+   color: var(--text-muted);
+   transform: scale(1.1);
+   }
+
+   /* Hidden Utility */
+   .hidden {
+   display: none !important;
+   }
+
+/* ===========================================
+   📌 Embedded Scroll Header Bookmark Variant
+   =========================================== */
+.bookmark-tag.scroll-bookmark {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  font-size: 1.3rem;
+  z-index: 5;
+}
+
+   /* ===================================================
+   Default overlays
+   =================================================== */
+
+   .background-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   opacity: 0.25;
+   pointer-events: none;
+   transition: background-image 0.5s ease, opacity 0.3s ease;
+   }
+
+/* ===================================================
+Collapsable Intros & Disclaimers
+=================================================== */
+
+.disclaimer-box summary {
+  list-style: none; /* Removes default disclosure marker */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: var(--space-sm);
+  position: relative;
+}
+
+.disclaimer-heading {
+  color: var(--text-accent) !important;
+}
+
+.disclaimer-box summary::-webkit-details-marker {
+  display: none; /* Removes default WebKit marker */
+}
+
+.disclaimer-heading::before,
+.disclaimer-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--text-accent) !important;
+  opacity: 0.4;
+}
+
+/* Optional: Add custom arrow if you want a consistent icon across browsers */
+.disclaimer-box[open] summary::after {
+  content: "▾"; /* Arrow down */
+  margin-left: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--text-accent) !important;
+}
+
+.disclaimer-box:not([open]) summary::after {
+  content: "▸"; /* Arrow right */
+  margin-left: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--text-accent);
+}
+
+.disclaimer-box {
+  border-top: 1px solid var(--section-border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.disclaimer-box[open] {
+  background: linear-gradient(to bottom, rgba(255, 236, 192, 0.05), rgba(255, 236, 192, 0.03));
+  border-radius: var(--radius-md);
+}
+
+
+.tgk-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-gold);
+  color: #111;
+  padding: 0.75em 1.25em;
+  border-radius: 2em;
+  font-weight: bold;
+  z-index: 9999;
+  opacity: 0.95;
+  box-shadow: 0 0 0.5em rgba(0,0,0,0.3);
+}
+
+:root {
+  --overlay-bg-gradient: linear-gradient(
+    to right,
+    rgba(65, 54, 38, 0.92),
+    rgba(84, 72, 48, 0.92)
+  );
+}
