@@ -1,5 +1,6 @@
 [build]
-  command = "npx @11ty/eleventy"
+  # Linux shell on Netlify: rm works
+  command = "rm -f .env .env.* && npx @11ty/eleventy"
   publish = "_site"
   functions = "functions"
 
@@ -8,9 +9,5 @@
 
 [build.environment]
   NODE_VERSION = "20"
-
-  # Stripe secrets – keep these ONLY in Netlify env (not in code!)
-  # STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET should be set in the Netlify UI
-
-  # Omit these from Netlify’s secrets scanner (they are not actually secrets)
-  SECRETS_SCAN_OMIT_KEYS = "PUBLIC_PRICE_ADEPT_YEAR_PROMO_LABEL,PUBLIC_PRICE_INITIATE_LABEL,PUBLIC_PRICE_INITIATE_YEAR_LABEL,PUBLIC_PRICE_ADEPT_YEAR_LABEL,PUBLIC_PRICE_LIFETIME_FOUNDER_LABEL,PUBLIC_BILLING_PORTAL_RETURN,PUBLIC_PRICE_ADEPT_YEARLY_PROMO,PUBLIC_PRICE_LIFETIME_FOUNDER,PUBLIC_PRICE_ADEPT_YEARLY,PUBLIC_PRICE_ADEPT_MONTHLY,PUBLIC_PRICE_LIFETIME,PUBLIC_PRICE_INITIATE_MONTHLY,PUBLIC_PRICE_INITIATE_YEARLY"
+  # optional belt-and-braces for the scanner (shouldn’t be needed after rm)
+  SECRETS_SCAN_OMIT_PATHS = ".env,.env.*"
