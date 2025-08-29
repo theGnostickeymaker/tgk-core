@@ -13,7 +13,8 @@
     "preview": "pnpm run clean && pnpm run build && python3 -m http.server 8090 -d _site",
     "live": "eleventy --serve",
     "preview:alt": "(python3 -m http.server 8090 -d _site || python3 -m http.server 8091 -d _site)",
-    "verify": "pnpm install && pnpm run build"
+    "verify": "pnpm install && pnpm run build",
+    "build:ci": "DEBUG=Eleventy*,Templates* pnpm exec eleventy"
   },
   "keywords": [],
   "author": "",
