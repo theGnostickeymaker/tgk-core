@@ -1,0 +1,26 @@
+:root{
+  --bg:#0b0b0d;
+  --fg:#f2f2f2;
+  --muted:#b8b8b8;
+  --accent:#caa85e; /* TGK gold */
+  --link:#a8c7ff;
+  --card:#141418;
+  --border:#26262d;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg)}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid var(--border)}
+.site-header .brand{font-weight:700;color:var(--fg)}
+.site-nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.site-footer{padding:2rem 1rem;border-top:1px solid var(--border);color:var(--muted)}
+main{max-width:1000px;margin:2rem auto;padding:0 1rem}
+.hero{padding:2rem 1rem;background:linear-gradient(180deg, rgba(202,168,94,0.1), transparent)}
+.lead{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;padding:0;list-style:none}
+.cards li{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem}
+.tgk-quote{border-left:4px solid var(--accent);padding:0.5rem 1rem;margin:1rem 0;background:#111118;border-radius:8px}
+.tgk-quote blockquote{margin:0}
+input[type="search"]{width:100%;padding:0.75rem;border-radius:8px;border:1px solid var(--border);background:#0f0f13;color:var(--fg);margin:1rem 0}

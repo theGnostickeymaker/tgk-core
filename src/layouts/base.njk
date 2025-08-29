@@ -1,16 +1,2 @@
-﻿<!doctype html>
-<html lang="en">
-<head>
-  {% include "head.njk" %}
-</head>
-<body class="tgk">
-  {% include "nav.njk" %}
-  {% include "header.njk" %}
-
-  <main class="container prose tgk-prose">
-    {{ content | safe }}
-  </main>
-
-  {% include "footer.njk" %}
-</body>
-</html>
+<!doctype html><html lang="en"><head>{% include "head.njk" %}</head>
+<body><main id="content">{{ content | safe }}</main></body></html>

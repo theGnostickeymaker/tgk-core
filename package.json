@@ -1,0 +1,24 @@
+{
+  "name": "tgk",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "nl:dev": "netlify dev",
+    "clean": "rm -rf _site",
+    "serve": "eleventy --serve",
+    "check": "eleventy --version",
+    "preview": "pnpm run clean && pnpm run build && python3 -m http.server 8090 -d _site",
+    "live": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "netlify-cli": "^23.4.2"
+  }
+}

@@ -1,39 +1,7 @@
-<button type="button" id="mobileToggle" class="hamburger-icon" aria-label="Open Navigation">☰</button>
-
-<nav id="mobileNav" class="mobile-menu">
-  <div class="drawer-content">
-    <p class="drawer-label nolink">Navigation</p>
-    <ul class="nav-menu">
-      <li><a href="/">Home</a></li>
-      <li id="dashboardLink" class="hidden"><a href="/dashboard/">Dashboard</a></li>
-
-      {# keep .html links per your request #}
-      <li><a href="/TGK-teachings/teachings-index.html">The Teachings</a></li>
-      <li><a href="/TGK-obsidian-key/obsidian-index.html">Obsidian Key</a></li>
-      <li><a href="/TGK-gnostic-eye/gnostic-eye-index.html">Gnostic Eye</a></li>
-      <li><a href="/TGK-audio/resonant-key-index.html">Resonant Key</a></li>
-      <li><a href="/TGK-vault/hidden-vault.html">The Vault</a></li>
-
-      <li><a href="/children/">Children's Corner</a></li>
-      <li><a href="/keymakers-dream/">Keymaker's Dream</a></li>
-      <li><a href="/shop/">Shop</a></li>
-      <li><a href="/community/">Community</a></li>
-      <li><a id="authLink" href="/account/">Account</a></li>
-      <li><a id="subscribe-btn-nav" href="/subscribe/">Subscribe</a></li>
-      <li><a href="/about/">About</a></li>
-    </ul>
-
-    <p class="drawer-label nolink">Connect</p>
-    <div class="mobile-nav-social">
-      <a href="https://facebook.com/thegnostickey" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://instagram.com/thegnostickey" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://tiktok.com/@thegnostickey" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://youtube.com/@thegnostickey" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://twitter.com/thegnostickey" target="_blank" rel="noopener">X</a>
-      <a href="https://t.me/thegnostickey" target="_blank" rel="noopener">Telegram</a>
-      <a href="https://thegnostickey.substack.com" target="_blank" rel="noopener">Substack</a>
-    </div>
-  </div>
+<nav class="site-nav">
+  <ul>
+    {% for item in site.nav %}
+      <li><a href="{{ item.url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
 </nav>
-
-<div id="navOverlay"></div>

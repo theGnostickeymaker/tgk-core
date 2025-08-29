@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Search
+description: Find scrolls and series.
+---
+<h1>Search</h1>
+<input id="q" type="search" placeholder="Search titles and descriptions" aria-label="Search" />
+<ul id="results"></ul>
+
+<script>
+async function go() {
+  const res = await fetch("/search/index.json");
+  const data = await res.json();
+  const q = document.getElementById("q");
+  const ul = document.getElementById("results");
+
+  function render(list) {
+    ul.innerHTML = "";
+    list.forEach(item => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = item.url;
+      a.textContent = item.title || item.url;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+  }
+
+  render(data);
+  q.addEventListener("input", () => {
+    const term = q.value.trim().toLowerCase();
+    if (!term) return render(data);
+    const filtered = data.filter(i =>
+      (i.title || "").toLowerCase().includes(term) ||
+      (i.description || "").toLowerCase().includes(term) ||
+      (i.series || "").toLowerCase().includes(term)
+    );
+    render(filtered);
+  });
+}
+go();
+</script>

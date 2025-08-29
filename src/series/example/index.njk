@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+title: Example Series
+description: Demonstration series listing.
+---
+<h1>Example Series</h1>
+<ul class="cards">
+  {% for p in collections.scrolls %}
+    {% if p.data.series == "example" %}
+      <li><a href="{{ p.url }}">{{ p.data.title }}</a> <small>{{ p.date | date }}</small></li>
+    {% endif %}
+  {% endfor %}
+</ul>

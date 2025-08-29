@@ -1,0 +1,13 @@
+{
+  "title": "The Gnostic Key",
+  "shortTitle": "TGK",
+  "description": "A sovereign library and media space for sacred knowledge, investigations and community.",
+  "url": "https://example.tgk",
+  "nav": [
+    { "title": "Home", "url": "/" },
+    { "title": "Series", "url": "/series/" },
+    { "title": "Pricing", "url": "/pages/pricing/" },
+    { "title": "Account", "url": "/pages/account/" },
+    { "title": "Search", "url": "/pages/search/" }
+  ]
+}

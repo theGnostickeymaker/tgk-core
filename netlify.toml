@@ -1,11 +1,9 @@
 [build]
-  command = "npx @11ty/eleventy"
+  command = "pnpm run build"
   publish = "_site"
-  functions = "functions"
+  functions = "netlify/functions"
 
-[functions]
-  node_bundler = "esbuild"
-  directory = "functions"
-
-[[plugins]]
-  package = "@netlify/plugin-functions-install-core"
+[[redirects]]
+  from = "/search"
+  to = "/pages/search/"
+  status = 301
