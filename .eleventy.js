@@ -1,43 +1,38 @@
-module.exports = function(eleventyConfig) {
-  // Static assets
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+// .eleventy.js (CommonJS, safe default)
+const { DateTime } = require("luxon");
+const slugify = require("slugify");
 
-  // Filters
-  eleventyConfig.addNunjucksFilter("date", (value, format) => {
-    const d = value === "now" ? new Date() : new Date(value);
-    if (Number.isNaN(d.getTime())) return "";
-    if (format === "yyyy") return String(d.getFullYear());
-    return new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(d);
+module.exports = function(eleventyConfig) {
+  eleventyConfig.setNunjucksEnvironmentOptions({
+    throwOnUndefined: true,
+    trimBlocks: true,
+    lstripBlocks: true
   });
 
-  eleventyConfig.addNunjucksFilter("slug", (str = "") =>
-    String(str)
-      .toLowerCase()
-      .normalize("NFKD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/(^-|-$)/g, "")
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+
+  eleventyConfig.addFilter("date", (d, fmt = "dd LLL yyyy") => {
+    if (!d) return "";
+    // Accept JS Date or ISO string
+    const jsd = d instanceof Date ? d : new Date(d);
+    return DateTime.fromJSDate(jsd, { zone: "utc" }).toFormat(fmt);
+  });
+
+  eleventyConfig.addFilter("slug", s =>
+    slugify(String(s ?? ""), { lower: true, strict: true })
   );
 
   eleventyConfig.addShortcode("year", () => String(new Date().getFullYear()));
-
-  // Lighter server options (Eleventy Dev Server)
-  eleventyConfig.setServerOptions({
-    port: 8080,
-    showAllHosts: false,
-    domDiff: false,        // lighter reload
-    liveReload: true,
-    // no automatic open, no verbose logging
+  eleventyConfig.addPairedShortcode("quote", (content, author = "") => {
+    const cite = author ? `<cite>${author}</cite>` : "";
+    return `<blockquote class="tgk-quote">${content}${cite}</blockquote>`;
   });
 
-  // Ignore noisy paths for the watcher
-  eleventyConfig.watchIgnores.add("_site/**");
-  eleventyConfig.watchIgnores.add("node_modules/**");
-  eleventyConfig.watchIgnores.add(".git/**");
-
   return {
-    dir: { input: "src", includes: "_includes", layouts: "layouts", output: "_site" },
+    dir: { input: "src", output: "_site", includes: "_includes", layouts: "layouts" },
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+    templateFormats: ["njk", "md"]
   };
 };
