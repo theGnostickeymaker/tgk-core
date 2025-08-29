@@ -1,16 +1,16 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-  {% include "partials/head.njk" %}
+  {% include "head.njk" %}
 </head>
 <body class="tgk">
-  {% include "partials/nav.njk" %}
-  {% include "partials/header.njk" %}
+  {% include "nav.njk" %}
+  {% include "header.njk" %}
 
   <main class="container prose tgk-prose">
     {{ content | safe }}
   </main>
 
-  {% include "partials/footer.njk" %}
+  {% include "footer.njk" %}
 </body>
 </html>
