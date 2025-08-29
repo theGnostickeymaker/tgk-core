@@ -1,9 +1,6 @@
 [build]
   command = "pnpm run build"
   publish = "_site"
-  functions = "netlify/functions"
 
-[[redirects]]
-  from = "/search"
-  to = "/pages/search/"
-  status = 301
+[build.environment]
+  NODE_VERSION = "20.19.4"

@@ -20,5 +20,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "netlify-cli": "^23.4.2"
-  }
+  },
+  "packageManager": "pnpm@10.15.0"
 }
