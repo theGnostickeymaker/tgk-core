@@ -1,13 +1,11 @@
 [build]
-  # Linux shell on Netlify: rm works
-  command = "rm -f .env .env.* && npx @11ty/eleventy"
+  command = "npx @11ty/eleventy"
   publish = "_site"
   functions = "functions"
 
 [functions]
   node_bundler = "esbuild"
+  directory = "functions"
 
-[build.environment]
-  NODE_VERSION = "20"
-  # optional belt-and-braces for the scanner (shouldn’t be needed after rm)
-  SECRETS_SCAN_OMIT_PATHS = ".env,.env.*"
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
