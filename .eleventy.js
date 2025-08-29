@@ -1,14 +1,18 @@
-﻿// Eleventy config — src input, layouts/includes dirs, _site output
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "src/images": "images" });
-  eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts" });
-  eleventyConfig.addPassthroughCopy({ "src/styles": "styles" });
+﻿module.exports = function(eleventyConfig) {
+  // pass-through assets used in pages
   eleventyConfig.addPassthroughCopy({ "src/scripts": "scripts" });
+  eleventyConfig.addPassthroughCopy({ "src/css": "assets" });
+  eleventyConfig.addPassthroughCopy({ "src/TGK-assets": "TGK-assets" });
+
+  // If/when you move your TGK CSS out of _site, enable this and create the folder:
+  // eleventyConfig.addPassthroughCopy({ "src/css/TGK-main-styles": "css/TGK-main-styles" });
+
   return {
-    dir: { input: "src", includes: "partials", layouts: "layouts", data: "_data", output: "_site" },
-    templateFormats: ["njk", "md", "html"],
-    htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk",
-    pathPrefix: "/"
+    dir: {
+      input: "src",
+      includes: "partials",
+      layouts: "layouts",
+      output: "_site"
+    }
   };
 };

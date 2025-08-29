@@ -1,61 +1,31 @@
-<!-- 🌙 TGK Base Head (global) -->
+{# Head partial used by base.njk #}
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="tgk-access" content="free" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="tgk-access" content="{{ access or 'free' }}" />
 
-<title>The Gnostic Key ✦ Unlock the Hidden Truth</title>
-<meta name="description" content="The Gnostic Key is a sacred digital library for seekers of hidden truth, spiritual knowledge, and eternal wisdom." />
+<title>{{ title or 'The Gnostic Key — Unlock the Hidden Truths' }}</title>
+<meta name="description" content="{{ description or 'A sacred digital library of forbidden history, esoteric wisdom, and spiritual rebellion.' }}"/>
 
-<!-- Open Graph defaults (overridden per page by partials.js) -->
+{# OG/Twitter (can refine later) #}
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Gnostic Key - Unlock the Hidden Truths">
-<meta property="og:description" content="A sacred digital library of forbidden history, esoteric wisdom, and spiritual rebellion. Enter the gateway.">
-<meta property="og:image" content="https://thegnostickey.com/TGK-assets/images/share/tgk-index-main.jpg">
+<meta property="og:title" content="{{ title or 'The Gnostic Key' }}">
+<meta property="og:description" content="{{ description or 'Unlock the hidden scrolls.' }}">
+<meta property="og:image" content="/TGK-assets/images/share/tgk-index-main.jpg">
 <meta property="og:url" content="https://thegnostickey.com">
-
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Gnostic Key">
-<meta name="twitter:description" content="Unlock the hidden scrolls of mystery, rebellion, and sacred knowledge.">
-<meta name="twitter:image" content="https://thegnostickey.com/TGK-assets/images/share/tgk-index-main.jpg">
 
-<!-- JSON-LD (site-wide) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "The Gnostic Key",
-  "url": "https://thegnostickey.com",
-  "description": "The Gnostic Key is a sacred digital library for seekers of hidden truth, spiritual knowledge, and eternal wisdom.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "The Gnostic Key",
-    "url": "https://thegnostickey.com",
-    "logo": { "@type": "ImageObject", "url": "https://thegnostickey.com/favicon.ico" }
-  },
-  "inLanguage": "en",
-  "image": {
-    "@type": "ImageObject",
-    "url": "https://thegnostickey.com/TGK-assets/images/share/tgk-index-main.jpg",
-    "width": 1200, "height": 675
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://thegnostickey.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
-<!-- 🌟 Fonts & Favicon -->
+{# Favicon & Fonts #}
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Libre+Baskerville&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet" />
 
-<!-- 🎨 Core Styles -->
+{# ⛔ quick FOUC guard #}
+<style>html.tgk-cloak body{visibility:hidden}</style>
+<script>document.documentElement.classList.add('tgk-cloak');addEventListener('load',()=>document.documentElement.classList.remove('tgk-cloak'));</script>
+
+{# Core CSS — keep both so we don’t break current pages #}
+<link rel="stylesheet" href="/assets/tailwind.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/gnostic-core.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/navigation/theme-toggle.css" />
-
-<!-- 🎨 Component Styles -->
 <link rel="stylesheet" href="/css/TGK-main-styles/components/button-styles.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/components/card-styles.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/components/form-styles.css" />
@@ -63,50 +33,36 @@
 <link rel="stylesheet" href="/css/TGK-main-styles/components/quiz.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/components/teachings-scroll.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/components/vault-styles.css" />
-
-<!-- 🎨 Font Styles -->
 <link rel="stylesheet" href="/css/TGK-main-styles/fonts/typography-scale.css" />
-
-<!-- 🎨 Structure Styles -->
 <link rel="stylesheet" href="/css/TGK-main-styles/structure/dashboard-styles.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/structure/footer-styles.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/structure/header-styles.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/structure/layout-grid.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/structure/page-structure.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/structure/visibility-gates.css" />
-
-
-<!-- 🎨 Navigation Styles -->
 <link rel="stylesheet" href="/css/TGK-main-styles/navigation/nav-bar.css" />
-
-<!-- 🎨 Theme Tokens -->
 <link rel="stylesheet" href="/css/TGK-main-styles/themes/light.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/themes/dark.css" />
 <link rel="stylesheet" href="/css/TGK-main-styles/themes/accents.css" />
 
-<!-- Theme & Navigation -->
+{# Scripts (keep your current modules) #}
 <script type="module" src="/scripts/navigation/mobile-nav.js"></script>
 <script type="module" src="/scripts/navigation/theme.js"></script>
 <script type="module" src="/scripts/navigation/scroll-tabs.js"></script>
-
-<!-- Checkout -->
 <script type="module" src="/scripts/checkout/checkout.js"></script>
-
-<!-- dashboard -->
 <script type="module" src="/scripts/dashboard/bookmark-toggle.js"></script>
 <script type="module" src="/scripts/dashboard/dashboard.js"></script>
-
-<!-- Firebase Config + Auth -->
 <script type="module" src="/scripts/auth/firebase-config.js"></script>
-
 <script type="module">
   import { initializeAuth } from '/scripts/auth/auth.js';
-
-  const accessLevel = document.querySelector('meta[name="tgk-access"]')?.content || 'free';
-
   initializeAuth({
-    premiumGuard: accessLevel === 'premium',
-    vaultGate: accessLevel === 'vault',
-    adminGate: accessLevel === 'admin'
+    premiumGuard: (document.querySelector('meta[name="tgk-access"]')?.content || 'free') === 'premium',
+    vaultGate:    (document.querySelector('meta[name="tgk-access"]')?.content || 'free') === 'vault',
+    adminGate:    (document.querySelector('meta[name="tgk-access"]')?.content || 'free') === 'admin'
   });
 </script>
+
+{# Optional per-page scripts via front matter: scripts: [- '/scripts/quiz.js'] #}
+{% if scripts %}
+  {% for s in scripts %}
+    <script de
